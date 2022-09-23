@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-const query = groq`*[_type == "about"][0]{
+const query = groq`*[_type == "About"][0]{
   title
 }`;
 
