@@ -50,6 +50,24 @@ const GlobalStyles = createGlobalStyle`
 		padding: 0;
     font-family: ${font.family100};
 	}
+	
+	button:focus {
+    outline: none;
+  }
+
+	button {
+		border: 0;
+    font-family: ${font.family100};
+    background: transparent;
+	}
+
+	button:hover {
+		cursor: pointer;
+	}
+	button[disabled]{
+    opacity: 0.2;
+    pointer-events: none;
+  }
 `;
 
 export default GlobalStyles;

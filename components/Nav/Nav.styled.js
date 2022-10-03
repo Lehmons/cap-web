@@ -25,7 +25,7 @@ const NavStyles = styled.section`
   .burger-svg {
     margin-right: 1rem;
     top: 0.1rem;
-    background: red;
+    background: none;
     ${media.smallDesktopAndBelow`
       margin-right: 10px;
       top: 1px;
@@ -43,6 +43,17 @@ const NavStyles = styled.section`
     `}
   }
 
+  .logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    ${media.tabletPortraitAndBelow`
+      width: 100%;
+      text-align: center;
+    `}
+  }
+
   button span,
   a,
   span {
@@ -57,7 +68,7 @@ const NavStyles = styled.section`
   }
 
   button {
-    background: red;
+    background: none;
   }
 
   .m-burger-svg {
@@ -69,6 +80,13 @@ const NavStyles = styled.section`
 
   .menu span,
   .menu .burger-svg {
+    ${media.tabletPortraitAndBelow`
+      display: none;
+    `}
+  }
+
+  span,
+  .chevron-svg {
     ${media.tabletPortraitAndBelow`
       display: none;
     `}
