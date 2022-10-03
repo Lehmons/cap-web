@@ -1,13 +1,7 @@
 @font-face {
-  font-family: "AyerDeck";
-  src: url("../public/fonts/AyerDeck-Medium-Trial.otf") format("otf"),
-    url("https://capawards.s3.eu-west-2.amazonaws.com/AyerDeck-Medium-Trial.otf")
-      format("oft");
+  font-family: "Certeau";
+  src: url("/public/fonts/Certeau-Trial.woff2") format("woff2"),
+    url("/fonts/Certeau-Trial.woff") format("woff");
   font-style: normal;
   font-weight: normal;
-}
-
-h2 {
-  font-family: AyerDeck;
-  background: red;
 }

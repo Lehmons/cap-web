@@ -9,13 +9,19 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "file-loader": "^6.2.0",
     "framer-motion": "^7.2.1",
+    "groq": "^2.33.2",
+    "immer": "^9.0.15",
     "next": "12.2.5",
+    "next-sanity": "^0.8.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "styled-components": "^5.3.5"
+    "styled-components": "^5.3.5",
+    "url-loader": "^4.1.1"
   },
   "devDependencies": {
+    "@svgr/webpack": "^6.3.1",
     "babel-plugin-styled-components": "^2.0.7",
     "eslint": "8.23.0",
     "eslint-config-next": "12.2.5"

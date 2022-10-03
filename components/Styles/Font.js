@@ -11,9 +11,8 @@
 //
 
 const font = {
-  family100: "AyerDeck, Arial Black, arial, sans-serif",
-  family200: "AyerDeck-Medium, Arial Black, arial, sans-serif",
-  family300: "AyerDeck-Bold, Arial Black, arial, sans-serif",
+  family100:
+    "Certeau, 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif",
   titleLineHeight: "0.8",
   stat: "6.8rem",
   statTablet: "68px",
