@@ -1,17 +1,21 @@
 // ****************************************/
-// Menu
+// Desktop Menu
 // ****************************************/
 
 import styled from "styled-components";
 import { font, media } from "../Styles";
 
-const MenuStyles = styled.section`
+const DesktopMenuStyled = styled.section`
   position: fixed;
   top: 0;
   right: 0;
   width: 50%;
   height: 100%;
   background: ${(props) => props.theme.blue};
+  display: flex;
+  ${media.tabletPortraitAndBelow`
+      display: none;
+    `}
 
   .menu-items {
     display: flex;
@@ -19,7 +23,7 @@ const MenuStyles = styled.section`
     justify-content: center;
     width: 100%;
     height: 100%;
-    ${media.tabletPortraitAndBelow`
+    ${media.smallDesktopAndBelow`
       display: flex;
     `}
   }
@@ -31,9 +35,11 @@ const MenuStyles = styled.section`
     text-transform: uppercase;
     border: 1px solid white;
     margin: 0.9rem;
+    font-size: ${font.smallP};
     ${media.smallDesktopAndBelow`
       padding: 6px 9px;
       margin: 9px;
+      font-size: ${font.smallPMobile};
     `}
     ${media.tabletPortraitAndBelow`
       display: none;
@@ -44,8 +50,11 @@ const MenuStyles = styled.section`
     background: white;
     color: ${(props) => props.theme.blue};
   }
+  ${media.smallDesktopAndBelow`
+      display: flex;
+    `}
   ${media.tabletPortraitAndBelow`
       display: none;
     `}
 `;
-export default MenuStyles;
+export default DesktopMenuStyled;

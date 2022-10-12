@@ -5,14 +5,15 @@ import { getClient } from "../../lib/sanity.server";
 import { useAppStore } from "../../stores/AppStore";
 import Link from "next/link";
 import Chevron from "./chevron.svg";
-import Close from "./close.svg";
+import Logo from "./logo.svg";
 import useKeyPress from "../../lib/useKeyPress";
 
 // query
-const query = groq`*[_type == 'menu']{
+const query = groq`*[_type == 'menu'][0]{
   menu[] {
     page-> {
       title,
+        image,
       slug
     }
   }
@@ -89,7 +90,7 @@ export default function Menu() {
 
   return (
     <MenuMobileStyles
-      className="menu"
+      className="mobile-menu"
       initial="initial"
       animate={isMenuOpen ? "in" : "out"}
       exit="out"
@@ -97,14 +98,12 @@ export default function Menu() {
       transition={pageTransition}
       ref={ref}
     >
-      <div className="close-container">
-        <button onClick={close}>
-          <Close />
-        </button>
+      <div className="Logo-wrapper">
+        <Logo />
       </div>
       <div className="menu-items">
         {data
-          ? data?.map((item, i) => {
+          ? data?.menu?.map((item, i) => {
               if (!item?.page?.slug?.current) {
                 return null;
               }

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import PageStyles from "./Page.styled";
-import PageText from "./PageText";
+import TextBlock from "./TextBlock";
+import ImageBlock from "../ImageBlock";
+import ImageTextBlock from "../ImageTextBlock";
 
 export default function Page({
   pageTransition,
@@ -21,21 +23,38 @@ export default function Page({
     >
       {blocks
         ? blocks.map((block, i) => {
-            if (block?._type == "pageText") {
-              return <PageText key={i} paragraph={block?.paragraph} />;
-            }
-            if (block?._type == "pageImageText") {
+            if (block?._type == "textBlock") {
               return (
-                <PageImageText
+                <TextBlock
                   key={i}
-                  image={block?.image}
                   paragraph={block?.paragraph}
-                  linkedPage={block?.linkedPage}
+                  lineBreaker={block?.lineBreaker}
                 />
               );
             }
-            if (block?._type == "pageImage") {
-              return null;
+            if (block?._type == "imageBlock") {
+              return (
+                <section className="image-block" key={i}>
+                  <ImageBlock
+                    title={block?.image?.alt}
+                    text={block?.image?.alt}
+                    image={block?.image}
+                    asset={block?.image?.asset}
+                    isThumb={false}
+                    hasPaddingBottom={true}
+                  />
+                </section>
+              );
+            }
+            if (block?._type == "imageTextBlock") {
+              return (
+                <ImageTextBlock
+                  key={i}
+                  image={block?.image?.image}
+                  paragraph={block?.paragraph}
+                  lineBreaker={block?.lineBreaker}
+                />
+              );
             }
           })
         : null}

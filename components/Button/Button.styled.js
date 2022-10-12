@@ -28,12 +28,12 @@ const ButtonStyles = styled.button`
   &.primary.is-active,
   &.primary:active,
   &.primary:hover {
-    background: blue;
-    color: blue;
+    color: ${(props) => props.theme.blue};
+    color: ${(props) => props.theme.blue};
   }
 
   &.primary:hover span {
-    color: blue;
+    color: ${(props) => props.theme.blue};
   }
 
   &:hover {

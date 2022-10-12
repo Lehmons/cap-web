@@ -15,7 +15,7 @@ const theme = {
   sitePaddingLeftRightMobile: "20px",
   sitePaddingTop: "8rem",
   sitePaddingTopDesktop: "80px",
-  sitePaddingTopMobile: "38px",
+  sitePaddingTopMobile: "48px",
 };
 
 export default theme;

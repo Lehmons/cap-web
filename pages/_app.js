@@ -1,7 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
-import Menu from "../components/Menu";
-import Nav from "../components/Nav";
+import DesktopMenu from "../components/DesktopMenu";
 import Store from "../stores";
 import { initialState as appStore } from "../stores/AppStore";
 import MenuMobile from "../components/MenuMobile";
@@ -9,7 +8,7 @@ import MobileNav from "../components/MobileNav";
 import GlobalStyles from "../components/Styles/GlobalStyles";
 import theme from "../components/Styles/Theme";
 import { ThemeProvider } from "styled-components";
-import "../components/Styles/FontFace.css";
+import "~/components/Styles/FontFace.css";
 import scrollToWithCb from "../lib/Utils/scrollToWithCb";
 
 // Build initial state
@@ -101,8 +100,7 @@ const MyApp = ({ Component, pageProps, router }) => {
             <Component {...pageProps} />
           </motion.div>
           <GlobalStyles />
-          <Nav />
-          <Menu />
+          <DesktopMenu />
           <MenuMobile />
           <MobileNav />
         </AnimatePresence>
