@@ -22,25 +22,26 @@ const MenuMobileStyles = styled(motion.nav)`
     top: ${(props) => props.theme.sitePaddingTopMobile};
   `}
 
+  .logo-div {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 20%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo-div svg {
+    display: flex;
+  }
+
   .close-container {
-    display: block;
-    justify-content: flex-start;
+    display: flex;
+    justify-content: flex-end;
     padding: 2.5rem 2.3rem;
     ${media.smallDesktopAndBelow`
       padding: 25px 23px;
     `}
-  }
-
-  .logo-wrapper {
-    display: relative;
-    width: 100%;
-    height: 100%;
-    padding-bottom: 20px;
-  }
-
-  .logo-wrapper svg {
-    display: flex;
-    justify-content: center;
   }
 
   .menu-items {

@@ -9,9 +9,16 @@ import { motion } from "framer-motion";
 const PageStyles = styled(motion.section)`
   width: 50%;
   padding-top: calc(46.5vh - 8rem);
-  ${media.tabletLandscapeAndBelow`
+  ${media.tabletPortraitAndBelow`
     width:100%;
   `}
+
+  & > .page-text:nth-child(n+2) {
+    padding-top: 6rem;
+    ${media.smallDesktopAndBelow`
+      padding-top: 60px;
+    `}
+  }
 
   .text div {
     display: grid;
@@ -83,6 +90,33 @@ const PageStyles = styled(motion.section)`
 
   .image-block {
     padding: 2.5rem 2rem 6rem 2rem;
+  }
+
+  .linkedPage {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .linkedPage linktitle {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0;
+    color: ${(props) => props.theme.blue};
+    text-decoration: none;
+    text-transform: uppercase;
+    border-bottom: 1px solid ${(props) => props.theme.blue};
+    font-size: ${font.p};
+    ${media.smallDesktopAndBelow`
+      padding: 12px 20px;
+      font-size: ${font.pMobile};
+    `}
+    ${media.tabletPortraitAndBelow`
+      padding: 38px 9px;
+      margin: 0px;
+    `}
   }
 `;
 

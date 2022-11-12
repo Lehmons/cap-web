@@ -29,6 +29,7 @@ export default function Page({
                   key={i}
                   paragraph={block?.paragraph}
                   lineBreaker={block?.lineBreaker}
+                  linkedPage={block?.linkedPage}
                 />
               );
             }
@@ -53,6 +54,7 @@ export default function Page({
                   image={block?.image?.image}
                   paragraph={block?.paragraph}
                   lineBreaker={block?.lineBreaker}
+                  linkedPage={block?.linkedPage}
                 />
               );
             }

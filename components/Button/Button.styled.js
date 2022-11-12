@@ -18,10 +18,9 @@ const ButtonStyles = styled.button`
   &.primary {
     padding: 1rem 2.2rem 1.1rem 2.2rem;
     width: 100%;
-    border: 1px solid red;
+    border: 1px solid ${(props) => props.theme.blue};
     ${media.smallDesktopAndBelow`
       padding: 10px 22px 11px 22px;
-      border-radius: 22px;
 		`}
   }
 
@@ -46,7 +45,7 @@ const ButtonStyles = styled.button`
   }
 
   &.primary.outline {
-    background: blue;
+    background: ${(props) => props.theme.blue};
     color: white;
     border: 1px solid white;
     &:hover {
@@ -85,7 +84,7 @@ const ButtonStyles = styled.button`
     color: black;
     display: block;
     width: 100%;
-    border: 1px solid blue;
+    border: 1px solid ${(props) => props.theme.blue};
     &:hover {
       color: white;
     }

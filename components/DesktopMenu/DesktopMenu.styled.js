@@ -16,6 +16,9 @@ const DesktopMenuStyled = styled.section`
   ${media.tabletPortraitAndBelow`
       display: none;
     `}
+  ${media.tabletLandscapeAndBelow`
+      display: none;
+    `}
 
   .menu-items {
     display: flex;

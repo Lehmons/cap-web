@@ -98,7 +98,7 @@ export default function Menu() {
       transition={pageTransition}
       ref={ref}
     >
-      <div className="Logo-wrapper">
+      <div className="logo-div">
         <Logo />
       </div>
       <div className="menu-items">

@@ -7,20 +7,19 @@ import { font, media } from "../../Styles";
 
 const TextBlockStyles = styled.section`
   width: 100%;
+  padding: 2.5rem 0 6rem 0;
+  ${media.smallDesktopAndBelow`
+    padding: 25px 0 60px 0;
+  `}
 
-  .text {
+  .text > div {
     color: ${(props) => props.theme.blue};
-    padding: 2.5rem 6rem 6rem 6rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
     ${media.smallDesktopAndBelow`
-    padding-top: 25px;
     padding-left: 60px;
     padding-right: 60px;
-    padding-bottom: 60px;
-  `}
-    ${media.tabletLandscapeAndBelow`
-    padding-left: ${(props) => props.theme.sitePaddingLeftRightMobile};
-    padding-right: ${(props) => props.theme.sitePaddingLeftRightMobile};
-  `}
+      `}
   }
 
   .text p {
@@ -29,6 +28,46 @@ const TextBlockStyles = styled.section`
     ${media.smallDesktopAndBelow`
       font-size: ${font.pMobile};
     `}
+  }
+
+  .linked-page {
+    color: ${(props) => props.theme.blue};
+    font-size: ${font.smallP};
+    display: inline-block;
+    margin-top: 2.5rem;
+    width: auto;
+    ${media.smallDesktopAndBelow`
+      font-size: ${font.smallPMobile};
+      margin-top: 25px;
+    `}
+  }
+
+  .linked-page svg {
+    margin-top: 0.6rem;
+    ${media.smallDesktopAndBelow`
+      margin-top: 6px;
+    `}
+  }
+
+  .linked-page svg path {
+    stroke: ${(props) => props.theme.blue};
+  }
+
+  .linked-page span {
+    display: inline-block;
+    padding-left: 6rem;
+    padding-right: 0.5rem;
+    ${media.smallDesktopAndBelow`
+    padding-left: 60px;
+    padding-right: 5px;
+      `}
+  }
+
+  & > .linebreaker:nth-of-type(1) {
+    margin-top: 6.6rem;
+    ${media.smallDesktopAndBelow`
+    margin-top: 66px;
+      `}
   }
 
   .linebreaker {

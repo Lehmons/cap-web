@@ -1,11 +1,11 @@
 // ****************************************/
-// ImageBlock
+// Nav Shimmer
 // ****************************************/
 
 import styled from "styled-components";
 import { media, underline } from "../Styles";
 
-const ImageBlockStyles = styled.section`
+const NavShimmerStyles = styled.section`
   position: relative;
   .image-wrapper {
     position: relative;
@@ -40,4 +40,4 @@ const ImageBlockStyles = styled.section`
   }
 `;
 
-export default ImageBlockStyles;
+export default NavShimmerStyles;
