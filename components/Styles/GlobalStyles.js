@@ -82,7 +82,7 @@ const GlobalStyles = createGlobalStyle`
     `}
   }
 
-  ul, ol, p {
+  ol, p {
     font-size: ${font.p};
     line-height: ${font.pLineHeight};
     ${media.smallDesktopAndBelow`
@@ -90,13 +90,22 @@ const GlobalStyles = createGlobalStyle`
     `}
   }
 
+ul {
+		font-size: ${font.p};
+		line-height: 2.9rem;
+		text-transform: uppercase;
+    ${media.smallDesktopAndBelow`
+      font-size: ${font.pMobile};
+			line-height: 29px;
+    `}
+}
 
 	ul li {
 		position: relative;
-		padding-left: 1.4rem;
+		padding-left: 2rem;
 		${media.smallDesktopAndBelow`
-			padding-left: 14px;
-		`}
+      padding-left: 20px;
+    `}
 	}
 
 	ul li:before {
@@ -105,10 +114,14 @@ const GlobalStyles = createGlobalStyle`
 		position: absolute;
 		width: 10px;
 		height: 10px;
-		top: 7px;
-		left: -8px;
-		border: 1px solid ${(props) => props.theme.blue};
+		top: 10px;
+		left: 2px;
+		background: ${(props) => props.theme.blue};
 		transform: rotate(-45deg);
+		${media.tabletPortraitAndBelow`
+      background: white;
+			border: 1px solid ${(props) => props.theme.blue};
+    `}
 	}
 
 	

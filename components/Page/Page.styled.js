@@ -8,9 +8,10 @@ import { motion } from "framer-motion";
 
 const PageStyles = styled(motion.section)`
   width: 50%;
-  padding-top: calc(46.5vh - 8rem);
+  padding-top: calc(46.5vh - 29rem);
   ${media.tabletPortraitAndBelow`
     width:100%;
+    padding-top: 338px;
   `}
 
   & > .page-text:nth-child(n+2) {
@@ -90,6 +91,17 @@ const PageStyles = styled(motion.section)`
 
   .image-block {
     padding: 2.5rem 2rem 6rem 2rem;
+  }
+
+  .image-block .image-wrapper {
+    background: ${(props) => props.theme.blue};
+  }
+
+  .image-block img {
+    opacity: 0.8;
+    transition: opacity 0.6s ease-in-out;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
   }
 
   .linkedPage {

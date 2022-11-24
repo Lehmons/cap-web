@@ -3,12 +3,18 @@ import DesktopMenuStyled from "./DesktopMenu.styled";
 import Link from "next/link";
 import groq from "groq";
 import { getClient } from "../../lib/sanity.server";
+import NavShimmer from "../NavShimmer";
 
 // query
 const query = groq`*[_type == 'menu'][0]{
-  menu[]{page->{ title, slug
-        }
-}
+  menu[]{page->{ title, slug }},
+  shimmer{
+    ...,
+    image {
+      ...,
+      asset->
+    }
+  }
 }`;
 
 export default function menu() {
@@ -48,6 +54,7 @@ export default function menu() {
             })
           : null}
       </div>
+      <NavShimmer shimmer={data?.shimmer} />
     </DesktopMenuStyled>
   );
 }

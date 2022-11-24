@@ -4,6 +4,8 @@ import { usePreviewSubscription } from "../lib/sanity";
 import dynamic from "next/dynamic";
 const Home = dynamic(() => import("../components/Home"));
 const PageComponent = dynamic(() => import("../components/Page"));
+const News = dynamic(() => import("../components/News"));
+const NewsOverview = dynamic(() => import("../components/NewsOverview"));
 
 export default function Page({
   data,
@@ -19,6 +21,8 @@ export default function Page({
     initialData: data?.pageData,
     enabled: data?.preview,
   });
+
+  console.log(previewData, data?.query);
 
   // 4. Return the correct component based on the docType
   return (
@@ -37,6 +41,22 @@ export default function Page({
           pageVariants={pageVariants}
           pageTransition={pageTransition}
           {...previewData}
+        />
+      )}
+      {docType === "news" && (
+        <News
+          pageStyle={pageStyle}
+          pageVariants={pageVariants}
+          pageTransition={pageTransition}
+          {...previewData}
+        />
+      )}
+      {docType === "newsOverview" && (
+        <NewsOverview
+          pageStyle={pageStyle}
+          pageVariants={pageVariants}
+          pageTransition={pageTransition}
+          posts={previewData}
         />
       )}
     </>

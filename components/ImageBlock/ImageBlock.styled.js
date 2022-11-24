@@ -28,7 +28,6 @@ const ImageBlockStyles = styled.section`
     left: 0;
     width: 100%;
     height: 100%;
-    transition: opacity 0.6s ease-in-out;
   }
 
   &.lazy-pending img {

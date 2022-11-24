@@ -39,6 +39,10 @@ export default function Menu() {
     setIsMenuOpen(false);
   };
 
+  const onNavigate = (e) => {
+    close();
+  };
+
   const variants = {
     initial: {
       opacity: 0,

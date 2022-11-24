@@ -22,6 +22,13 @@ const TextBlockStyles = styled.section`
       `}
   }
 
+  .text h1 {
+    padding-bottom: 3rem;
+    ${media.smallDesktopAndBelow`
+    padding-bottom: 30px;
+    `}
+  }
+
   .text p {
     font-size: ${font.p};
     line-height: ${font.pLineHeight};
@@ -32,7 +39,7 @@ const TextBlockStyles = styled.section`
 
   .linked-page {
     color: ${(props) => props.theme.blue};
-    font-size: ${font.smallP};
+    font-size: ${font.p};
     display: inline-block;
     margin-top: 2.5rem;
     width: auto;
@@ -43,6 +50,7 @@ const TextBlockStyles = styled.section`
   }
 
   .linked-page svg {
+    height: 9px;
     margin-top: 0.6rem;
     ${media.smallDesktopAndBelow`
       margin-top: 6px;

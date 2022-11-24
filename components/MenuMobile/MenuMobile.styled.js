@@ -52,6 +52,12 @@ const MenuMobileStyles = styled(motion.nav)`
     height: 100%;
   }
 
+  .menu-items a svg {
+    display: flex;
+    padding-top: 4px;
+    height: 19px;
+  }
+
   .menu-items a {
     display: flex;
     width: 100%;
@@ -67,7 +73,7 @@ const MenuMobileStyles = styled(motion.nav)`
       font-size: ${font.pMobile};
     `}
     ${media.tabletPortraitAndBelow`
-      padding: 38px 9px;
+      padding: 10px 9px;
       margin: 0px;
     `}
   }

@@ -99,11 +99,11 @@ const MyApp = ({ Component, pageProps, router }) => {
           >
             <Component {...pageProps} />
           </motion.div>
-          <GlobalStyles />
-          <DesktopMenu />
-          <MenuMobile />
-          <MobileNav />
         </AnimatePresence>
+        <GlobalStyles />
+        <DesktopMenu />
+        <MenuMobile />
+        <MobileNav />
       </Store.Provider>
     </ThemeWrapper>
   );
