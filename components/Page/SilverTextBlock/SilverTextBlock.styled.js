@@ -1,5 +1,5 @@
 // ****************************************/
-// TextBlock
+// SilverTextBlock
 // ****************************************/
 
 import styled from "styled-components";
@@ -9,13 +9,14 @@ const TextBlockStyles = styled.section`
   width: 100%;
   min-height: 80rem;
   padding: 2.5rem 0 6rem 0;
+  background: #e6e6eb;
   ${media.smallDesktopAndBelow`
     padding: 25px 0 60px 0;
-    min-height: 800px;
+    min-height:800px;
   `}
 
   .text > div {
-    color: ${(props) => props.theme.blue};
+    color: black;
     padding-left: 6rem;
     padding-right: 6rem;
     ${media.smallDesktopAndBelow`
@@ -26,12 +27,14 @@ const TextBlockStyles = styled.section`
 
   .text h1 {
     padding-bottom: 3rem;
+    color: black;
     ${media.smallDesktopAndBelow`
     padding-bottom: 30px;
     `}
   }
 
   .text p {
+    color: black;
     font-size: ${font.p};
     line-height: ${font.pLineHeight};
     ${media.smallDesktopAndBelow`
@@ -39,8 +42,13 @@ const TextBlockStyles = styled.section`
     `}
   }
 
+  .text a {
+    color: black;
+    background: ${(props) => props.theme.blue};
+  }
+
   .linked-page {
-    color: ${(props) => props.theme.blue};
+    color: black;
     font-size: ${font.p};
     display: inline-block;
     margin-top: 2.5rem;
@@ -61,7 +69,7 @@ const TextBlockStyles = styled.section`
   }
 
   .linked-page svg path {
-    stroke: ${(props) => props.theme.blue};
+    stroke: black;
   }
 
   .linked-page span {
@@ -72,20 +80,6 @@ const TextBlockStyles = styled.section`
     padding-left: 60px;
     padding-right: 5px;
       `}
-  }
-
-  & > .linebreaker:nth-of-type(1) {
-    margin-top: 6.6rem;
-    ${media.smallDesktopAndBelow`
-    margin-top: 66px;
-      `}
-  }
-
-  .linebreaker {
-    padding-top: 0.5rem;
-    width: 100%;
-    height: 1px;
-    border-bottom: 1px solid ${(props) => props.theme.blue};
   }
 `;
 

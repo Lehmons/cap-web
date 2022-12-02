@@ -5,6 +5,7 @@ import NewsPost from "../NewsPost";
 export default function NewsOverview({
   pageTransition,
   pageVariants,
+  lineBreaker,
   pageStyle,
   posts,
 }) {
@@ -33,6 +34,13 @@ export default function NewsOverview({
             );
           })
         : null}
+      {lineBreaker && (
+        <>
+          <div className="linebreaker"></div>
+          <div className="linebreaker"></div>
+          <div className="linebreaker"></div>
+        </>
+      )}
     </NewsOverviewStyles>
   );
 }

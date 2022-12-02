@@ -1,64 +1,66 @@
 import React, { useState } from "react";
 import FaqStyles from "./Faq.styled";
-import TextBlock from "./TextBlock";
-import Accordion from "./Accordion";
+import Accordion from "../Accordion";
+import SimpleBlockContent from "../SimpleBlockContent";
 
 export default function Faq({
   pageTransition,
   pageVariants,
   pageStyle,
-  blocks,
+  paragraph,
+  title,
+  faqs,
 }) {
+  const [expanded, setExpanded] = useState([0]);
+
+  const onExpanded = (i) => {
+    if (expanded?.includes(i)) {
+      setExpanded([]);
+      return;
+    }
+    setExpanded([i]);
+  };
+
   return (
     <FaqStyles
-      key={"page"}
+      key={"faq"}
       style={pageStyle}
       initial="initial"
       animate="in"
       exit="out"
       variants={pageVariants}
       transition={pageTransition}
-      className="page page"
+      className="page faq"
     >
-      {blocks
-        ? blocks.map((block, i) => {
-            if (block?._type == "textBlock") {
-              return (
-                <TextBlock
-                  key={i}
-                  paragraph={block?.paragraph}
-                  lineBreaker={block?.lineBreaker}
-                  linkedPage={block?.linkedPage}
-                />
-              );
-            }
-            if (block?._type == "imageBlock") {
-              return (
-                <section className="image-block" key={i}>
-                  <ImageBlock
-                    title={block?.image?.alt}
-                    text={block?.image?.alt}
-                    image={block?.image}
-                    asset={block?.image?.asset}
-                    isThumb={false}
-                    hasPaddingBottom={true}
-                  />
+      {title && (
+        <section className="faq-title">
+          <h1>{title}</h1>
+        </section>
+      )}
+      {paragraph && (
+        <section className="description">
+          <SimpleBlockContent blocks={paragraph} />
+        </section>
+      )}
+      <section className="accordion-container">
+        {faqs
+          ? faqs.map((faq, i) => (
+              <Accordion
+                key={i}
+                title={faq?.title}
+                i={i}
+                expanded={expanded}
+                setExpanded={onExpanded}
+              >
+                <section className="faq-p">
+                  {faq?.paragraph && (
+                    <SimpleBlockContent blocks={faq?.paragraph} />
+                  )}
                 </section>
-              );
-            }
-            if (block?._type == "imageTextBlock") {
-              return (
-                <ImageTextBlock
-                  key={i}
-                  image={block?.image?.image}
-                  paragraph={block?.paragraph}
-                  lineBreaker={block?.lineBreaker}
-                  linkedPage={block?.linkedPage}
-                />
-              );
-            }
-          })
-        : null}
+              </Accordion>
+            ))
+          : null}
+      </section>
     </FaqStyles>
   );
 }

@@ -6,6 +6,7 @@ const Home = dynamic(() => import("../components/Home"));
 const PageComponent = dynamic(() => import("../components/Page"));
 const News = dynamic(() => import("../components/News"));
 const NewsOverview = dynamic(() => import("../components/NewsOverview"));
+const Faq = dynamic(() => import("../components/Faq"));
 
 export default function Page({
   data,
@@ -57,6 +58,14 @@ export default function Page({
           pageVariants={pageVariants}
           pageTransition={pageTransition}
           posts={previewData}
+        />
+      )}
+      {docType === "faq" && (
+        <Faq
+          pageStyle={pageStyle}
+          pageVariants={pageVariants}
+          pageTransition={pageTransition}
+          {...previewData}
         />
       )}
     </>

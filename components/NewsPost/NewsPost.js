@@ -8,9 +8,21 @@ export default function NewsPost({ title, images, date, slug, paragraph }) {
   const prettyDate = date ? dayjs(date).format("MMMM D, YYYY") : null;
   return (
     <NewsPostStyles className="news-post">
-      {title && <h2>{title}</h2>}
-      {prettyDate && <p>{prettyDate}</p>}
-      {paragraph && <SimpleBlockContent blocks={paragraph} />}
+      {title && (
+        <section className="news-text">
+          <h2>{title}</h2>
+        </section>
+      )}
+      {prettyDate && (
+        <span className="news-date">
+          <p>{prettyDate}</p>
+        </span>
+      )}
+      {paragraph && (
+        <section className="news-text">
+          <SimpleBlockContent blocks={paragraph} />
+        </section>
+      )}
       {images?.length && (
         <section className="image-wrapper">
           <ImageBlock

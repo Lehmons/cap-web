@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import PageStyles from "./Page.styled";
 import TextBlock from "./TextBlock";
+import BlueTextBlock from "./BlueTextBlock";
+import SilverTextBlock from "./SilverTextBlock";
 import ImageBlock from "../ImageBlock";
 import ImageTextBlock from "../ImageTextBlock";
 
@@ -26,6 +28,26 @@ export default function Page({
             if (block?._type == "textBlock") {
               return (
                 <TextBlock
+                  key={i}
+                  paragraph={block?.paragraph}
+                  lineBreaker={block?.lineBreaker}
+                  linkedPage={block?.linkedPage}
+                />
+              );
+            }
+            if (block?._type == "blueTextBlock") {
+              return (
+                <BlueTextBlock
+                  key={i}
+                  paragraph={block?.paragraph}
+                  lineBreaker={block?.lineBreaker}
+                  linkedPage={block?.linkedPage}
+                />
+              );
+            }
+            if (block?._type == "silverTextBlock") {
+              return (
+                <SilverTextBlock
                   key={i}
                   paragraph={block?.paragraph}
                   lineBreaker={block?.lineBreaker}

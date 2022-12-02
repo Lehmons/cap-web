@@ -11,7 +11,7 @@ import useKeyPress from "../../lib/useKeyPress";
 // query
 const query = groq`*[_type == 'menu'][0]{
   menu[] {
-    page-> {
+    linkedPage=> {
       title,
         image,
       slug
@@ -108,13 +108,13 @@ export default function Menu() {
       <div className="menu-items">
         {data
           ? data?.menu?.map((item, i) => {
-              if (!item?.page?.slug?.current) {
+              if (!item?.linkedPage?.slug?.current) {
                 return null;
               }
               return (
-                <Link href={item?.page?.slug?.current} key={i}>
+                <Link href={item?.linkedPage?.slug?.current} key={i}>
                   <a>
-                    <span>{item?.page?.title}</span>
+                    <span>{item?.linkedPage?.title}</span>
                     <Chevron />
                   </a>
                 </Link>

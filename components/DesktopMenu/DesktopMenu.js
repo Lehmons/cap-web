@@ -7,7 +7,11 @@ import NavShimmer from "../NavShimmer";
 
 // query
 const query = groq`*[_type == 'menu'][0]{
-  menu[]{page->{ title, slug }},
+  ...,
+  menu[]{
+    ...,
+    page->{title, slug} 
+  },
   shimmer{
     ...,
     image {
@@ -41,13 +45,18 @@ export default function menu() {
       <div className="menu-items">
         {data
           ? data?.menu?.map((item, i) => {
+              console.log(item);
               if (!item?.page?.slug?.current) {
                 return null;
               }
               return (
                 <Link href={item?.page?.slug?.current} key={i}>
                   <a>
-                    <span>{item?.page?.title}</span>
+                    <span>
+                      {item?.linkTitle ||
+                        item?.page?.title ||
+                        "Missing page title"}
+                    </span>
                   </a>
                 </Link>
               );

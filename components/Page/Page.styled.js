@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 const PageStyles = styled(motion.section)`
   width: 50%;
-  padding-top: calc(46.5vh - 29rem);
+  padding-top: calc(74.5vh - 29rem);
   ${media.tabletPortraitAndBelow`
     width:100%;
     padding-top: 338px;

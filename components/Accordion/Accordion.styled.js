@@ -9,20 +9,20 @@ const AccordionStyles = styled.section`
   button {
     position: relative;
     background: none;
-    padding: 2.5rem 1.2rem 2.5rem 0;
+    padding: 2rem 1.2rem 2rem 0;
     border-bottom: 1px solid ${(props) => props.theme.blue};
     display: block;
     width: 100%;
     font-size: ${font.smallP};
     ${media.smallDesktopAndBelow`
-      padding: 25px 12px 25px 0;
+      padding: 20px 12px 20px 0;
       font-size: ${font.smallPMobile};
     `};
     ${media.minDevicePixelRatio2`
-      border-bottom: 0.5px sold black;
+      border-bottom: 0.5px sold blue;
     `}
     ${media.tabletPortraitAndBelow`
-      padding: 25px 25px 25px 0;
+      padding: 20px 25px 20px 0;
     `}
   }
 
@@ -45,14 +45,14 @@ const AccordionStyles = styled.section`
     `}
   }
 
-  button .subtitle {
+  button .title {
     display: block;
     font-family: ${font.family200};
     @supports (font-variation-settings: normal) {
       font-family: ${font.family200VF};
     }
     padding-top: 0.3rem;
-    color: ${(props) => props.theme.black};
+    color: ${(props) => props.theme.blue};
     font-size: ${font.smallP};
     ${media.smallDesktopAndBelow`
       padding-top: 3px;
@@ -110,7 +110,7 @@ const AccordionStyles = styled.section`
     position: relative;
     width: 1.5rem;
     height: 1.5rem;
-    border: solid 1px black;
+    border: solid 1px blue;
     ${media.smallDesktopAndBelow`
       width: 15px;
       height: 15px;
@@ -119,7 +119,7 @@ const AccordionStyles = styled.section`
 
   .circle-plus .circle .horizontal {
     position: absolute;
-    background-color: black;
+    background-color: blue;
     width: 1.5rem;
     height: 1px;
     left: 50%;
@@ -133,7 +133,7 @@ const AccordionStyles = styled.section`
 
   .circle-plus .circle .vertical {
     position: absolute;
-    background-color: black;
+    background-color: blue;
     width: 1px;
     height: 1.5rem;
     left: 50%;
@@ -166,7 +166,7 @@ const AccordionStyles = styled.section`
   ul {
     padding-left: 10px;
     ${media.smallDesktopAndBelow`
-		  padding-left: 10px;
+		padding-left: 10px;
 		`}
   }
 
@@ -180,7 +180,7 @@ const AccordionStyles = styled.section`
     top: 50%;
     width: 7px;
     height: 1px;
-    background: black;
+    background: blue;
     display: block;
     transform: translateY(calc(-50% - 1px));
     content: "";

@@ -6,17 +6,19 @@ export default function Accordion({
   i,
   expanded,
   setExpanded,
-  subtitle,
-  Content
+  title,
+  children,
 }) {
   const isOpen = expanded.includes(i);
+
+  const elements = React.Children.toArray(children);
 
   // By using `AnimatePresence` to mount and unmount the contents, we can animate
   // them in and out while also only rendering the contents of open accordions
   return (
     <AccordionStyles className="accordion">
       <motion.button initial={false} onClick={() => setExpanded(i)}>
-        <span className="subtitle">{subtitle}</span>
+        <span className="title">{title}</span>
         <div className={`circle-plus closed ${isOpen ? "opened" : ""}`}>
           <div className="circle">
             <div className="horizontal" />
@@ -33,12 +35,12 @@ export default function Accordion({
             exit="collapsed"
             variants={{
               open: { opacity: 1, height: "auto" },
-              collapsed: { opacity: 0, height: 0 }
+              collapsed: { opacity: 0, height: 0 },
             }}
             transition={{ duration: 0.3, ease: [0.83, 0, 0.37, 1] }}
             className="accordion-content"
           >
-            <Content />
+            {elements}
           </motion.section>
         )}
       </AnimatePresence>
