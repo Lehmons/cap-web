@@ -89,41 +89,6 @@ const GlobalStyles = createGlobalStyle`
       font-size: ${font.pMobile};
     `}
   }
-
-ul {
-		font-size: ${font.p};
-		line-height: 2.9rem;
-		text-transform: uppercase;
-    ${media.smallDesktopAndBelow`
-      font-size: ${font.pMobile};
-			line-height: 29px;
-    `}
-}
-
-	ul li {
-		position: relative;
-		padding-left: 2rem;
-		${media.smallDesktopAndBelow`
-      padding-left: 20px;
-    `}
-	}
-
-	ul li:before {
-		display: block;
-		content: '';
-		position: absolute;
-		width: 10px;
-		height: 10px;
-		top: 10px;
-		left: 2px;
-		background: ${(props) => props.theme.blue};
-		transform: rotate(-45deg);
-		${media.tabletPortraitAndBelow`
-      background: white;
-			border: 1px solid ${(props) => props.theme.blue};
-    `}
-	}
-
 	
 	button:focus {
     outline: none;
@@ -142,6 +107,7 @@ ul {
     opacity: 0.2;
     pointer-events: none;
   }
+
 	#site{
 		margin-left: auto;
 		margin-right: auto;

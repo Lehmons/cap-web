@@ -7,11 +7,9 @@ import { font, media } from "../../Styles";
 
 const TextBlockStyles = styled.section`
   width: 100%;
-  min-height: 80rem;
-  padding: 2.5rem 0 6rem 0;
+  padding: 2.5rem 0 0rem 0;
   ${media.smallDesktopAndBelow`
-    padding: 25px 0 60px 0;
-    min-height: 800px;
+    padding: 25px 0 0px 0;
   `}
 
   .text > div {
@@ -19,8 +17,8 @@ const TextBlockStyles = styled.section`
     padding-left: 6rem;
     padding-right: 6rem;
     ${media.smallDesktopAndBelow`
-    padding-left: 60px;
-    padding-right: 60px;
+      padding-left: 60px;
+      padding-right: 60px;
       `}
   }
 
@@ -36,6 +34,40 @@ const TextBlockStyles = styled.section`
     line-height: ${font.pLineHeight};
     ${media.smallDesktopAndBelow`
       font-size: ${font.pMobile};
+    `}
+  }
+
+  ul {
+    font-size: ${font.p};
+    line-height: 2.9rem;
+    text-transform: uppercase;
+    ${media.smallDesktopAndBelow`
+      font-size: ${font.pMobile};
+			line-height: 29px;
+    `}
+  }
+
+  ul li {
+    position: relative;
+    padding-left: 2rem;
+    ${media.smallDesktopAndBelow`
+      padding-left: 20px;
+    `}
+  }
+
+  ul li:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 10px;
+    left: 2px;
+    background: ${(props) => props.theme.blue};
+    transform: rotate(-45deg);
+    ${media.tabletPortraitAndBelow`
+      background: white;
+			border: 1px solid ${(props) => props.theme.blue};
     `}
   }
 

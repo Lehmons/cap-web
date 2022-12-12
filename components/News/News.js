@@ -30,6 +30,7 @@ export default function News({
           date={date}
           images={images}
           slug={slug}
+          showOneImage={false}
         />
       )}
     </NewsStyles>

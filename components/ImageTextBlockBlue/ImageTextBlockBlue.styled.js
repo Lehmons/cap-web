@@ -1,5 +1,5 @@
 // ****************************************/
-// ImageTextBlock
+// ImageTextBlockBlue
 // ****************************************/
 
 import styled from "styled-components";
@@ -8,9 +8,10 @@ import { font, media, underline } from "../Styles";
 const ImageTextBlockStyles = styled.section`
   position: relative;
   width: 100%;
-  min-height: 80rem;
-  ${media.smallDesktopAndBelow`
-    min-height: 800px;
+  min-height: 100vh;
+  background: ${(props) => props.theme.blue};
+  ${media.tabletPortraitAndBelow`
+    min-height: 50vh;
   `}
 
   p {
@@ -27,22 +28,26 @@ const ImageTextBlockStyles = styled.section`
     `}
   }
 
-  .text {
-    color: ${(props) => props.theme.blue};
-    padding: 2.5rem 6rem 6rem 6rem;
+  .text > div {
+    color: white;
+    padding-left: 6rem;
+    padding-right: 6rem;
     ${media.smallDesktopAndBelow`
-    padding-top: 25px;
     padding-left: 60px;
     padding-right: 60px;
-    padding-bottom: 60px;
-  `}
-    ${media.tabletLandscapeAndBelow`
-    padding-left: ${(props) => props.theme.sitePaddingLeftRightMobile};
-    padding-right: ${(props) => props.theme.sitePaddingLeftRightMobile};
-  `}
+      `}
+  }
+
+  .text h1 {
+    padding-bottom: 3rem;
+    color: white;
+    ${media.smallDesktopAndBelow`
+    padding-bottom: 30px;
+    `}
   }
 
   .text p {
+    color: white;
     font-size: ${font.p};
     line-height: ${font.pLineHeight};
     ${media.smallDesktopAndBelow`
@@ -50,7 +55,13 @@ const ImageTextBlockStyles = styled.section`
     `}
   }
 
+  .text a {
+    color: white;
+    background: ${(props) => props.theme.blue};
+  }
+
   ul {
+    color: white;
     font-size: ${font.p};
     line-height: 2.9rem;
     text-transform: uppercase;
@@ -61,6 +72,7 @@ const ImageTextBlockStyles = styled.section`
   }
 
   ul li {
+    color: white;
     position: relative;
     padding-left: 2rem;
     ${media.smallDesktopAndBelow`
@@ -70,25 +82,18 @@ const ImageTextBlockStyles = styled.section`
 
   ul li:before {
     display: block;
-    content: "";
     position: absolute;
+    content: "";
     width: 10px;
     height: 10px;
     top: 10px;
     left: 2px;
-    background: ${(props) => props.theme.blue};
+    background: white;
     transform: rotate(-45deg);
     ${media.tabletPortraitAndBelow`
-      background: white;
-			border: 1px solid ${(props) => props.theme.blue};
+      background: ${(props) => props.theme.blue};
+			border: 1px solid white;
     `}
-  }
-
-  .linebreaker {
-    padding-top: 0.5rem;
-    width: 100%;
-    height: 1px;
-    border-bottom: 1px solid ${(props) => props.theme.blue};
   }
 `;
 

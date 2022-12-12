@@ -90,7 +90,10 @@ const PageStyles = styled(motion.section)`
   }
 
   .image-block {
-    padding: 2.5rem 2rem 6rem 2rem;
+    padding: 8rem 6rem 8rem 6rem;
+    ${media.smallDesktopAndBelow`
+    padding: 80px 60px 80px 60px;
+      `}
   }
 
   .image-block .image-wrapper {

@@ -108,13 +108,18 @@ export default function Menu() {
       <div className="menu-items">
         {data
           ? data?.menu?.map((item, i) => {
-              if (!item?.linkedPage?.slug?.current) {
+              console.log(item);
+              if (!item?.linkedPage?.page?.slug?.current) {
                 return null;
               }
               return (
-                <Link href={item?.linkedPage?.slug?.current} key={i}>
+                <Link href={item?.linkedPage?.page?.slug?.current} key={i}>
                   <a>
-                    <span>{item?.linkedPage?.title}</span>
+                    <span>
+                      {item?.linkTitle ||
+                        item?.page?.title ||
+                        "Missing page title"}
+                    </span>
                     <Chevron />
                   </a>
                 </Link>

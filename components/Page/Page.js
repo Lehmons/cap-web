@@ -5,6 +5,7 @@ import BlueTextBlock from "./BlueTextBlock";
 import SilverTextBlock from "./SilverTextBlock";
 import ImageBlock from "../ImageBlock";
 import ImageTextBlock from "../ImageTextBlock";
+import ImageTextBlockBlue from "../ImageTextBlockBlue";
 
 export default function Page({
   pageTransition,
@@ -72,6 +73,17 @@ export default function Page({
             if (block?._type == "imageTextBlock") {
               return (
                 <ImageTextBlock
+                  key={i}
+                  image={block?.image?.image}
+                  paragraph={block?.paragraph}
+                  lineBreaker={block?.lineBreaker}
+                  linkedPage={block?.linkedPage}
+                />
+              );
+            }
+            if (block?._type == "imageTextBlockBlue") {
+              return (
+                <ImageTextBlockBlue
                   key={i}
                   image={block?.image?.image}
                   paragraph={block?.paragraph}

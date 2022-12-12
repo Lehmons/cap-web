@@ -4,7 +4,14 @@ import ImageBlock from "../ImageBlock";
 import SimpleBlockContent from "../SimpleBlockContent";
 import dayjs from "dayjs";
 
-export default function NewsPost({ title, images, date, slug, paragraph }) {
+export default function NewsPost({
+  title,
+  images,
+  date,
+  slug,
+  paragraph,
+  showOneImage,
+}) {
   const prettyDate = date ? dayjs(date).format("MMMM D, YYYY") : null;
   return (
     <NewsPostStyles className="news-post">
@@ -23,7 +30,7 @@ export default function NewsPost({ title, images, date, slug, paragraph }) {
           <SimpleBlockContent blocks={paragraph} />
         </section>
       )}
-      {images?.length && (
+      {images?.length && showOneImage && (
         <section className="image-wrapper">
           <ImageBlock
             title={images[0]?.image?.alt}
@@ -33,6 +40,21 @@ export default function NewsPost({ title, images, date, slug, paragraph }) {
             isThumb={false}
             hasPaddingBottom={true}
           />
+        </section>
+      )}
+      {images?.length && !showOneImage && (
+        <section className="image-wrapper">
+          {images.map((image, i) => (
+            <ImageBlock
+              key={i}
+              title={image?.image?.alt}
+              text={image?.image?.alt}
+              image={image?.image}
+              asset={image?.image?.asset}
+              isThumb={false}
+              hasPaddingBottom={true}
+            />
+          ))}
         </section>
       )}
     </NewsPostStyles>

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import NewsOverviewStyles from "./NewsOverview.styled";
 import NewsPost from "../NewsPost";
+import Link from "next/link";
 
 export default function NewsOverview({
   pageTransition,
@@ -23,14 +24,18 @@ export default function NewsOverview({
       {posts
         ? posts.map((post, i) => {
             return (
-              <NewsPost
-                key={i}
-                title={post?.title}
-                date={post?.date}
-                slug={post?.slug}
-                paragraph={post?.paragraph}
-                images={post?.images}
-              />
+              <Link key={i} href={post?.slug?.current} scroll={false}>
+                <a className="news-post">
+                  <NewsPost
+                    title={post?.title}
+                    date={post?.date}
+                    slug={post?.slug}
+                    paragraph={post?.paragraph}
+                    images={post?.images}
+                    showOneImage={true}
+                  />
+                </a>
+              </Link>
             );
           })
         : null}
