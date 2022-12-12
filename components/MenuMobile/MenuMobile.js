@@ -10,13 +10,11 @@ import useKeyPress from "../../lib/useKeyPress";
 
 // query
 const query = groq`*[_type == 'menu'][0]{
-  menu[] {
-    linkedPage=> {
-      title,
-        image,
-      slug
-    }
-  }
+  ...,
+  menu[]{
+    ...,
+    page->{title, slug} 
+  },
 }`;
 
 export default function Menu() {

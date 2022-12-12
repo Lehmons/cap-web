@@ -88,7 +88,7 @@ const MyApp = ({ Component, pageProps, router }) => {
   return (
     <ThemeWrapper>
       <Store.Provider initialState={initialState}>
-        <AnimatePresence exitBeforeEnter>
+        <AnimatePresence exitBeforeEnter onExitComplete={onExitComplete}>
           <motion.div
             variants={pageVariants}
             key={router?.asPath}
