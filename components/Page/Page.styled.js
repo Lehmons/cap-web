@@ -9,13 +9,17 @@ import { motion } from "framer-motion";
 const PageStyles = styled(motion.section)`
   width: 50%;
   padding-top: calc(50vh - 8.5rem);
-	${media.smallDesktopAndBelow`
+  ${media.smallDesktopAndBelow`
 		padding-top: calc(50vh - 85px);
 	`}
   ${media.tabletPortraitAndBelow`
     width:100%;
-    padding-top: 338px;
+    padding-top: 0;
   `}
+  ${media.tabletPortraitAndBelow`
+      padding-left: 20px;
+      padding-right: 20px;
+    `}
 
   & > .page-text:nth-child(n+2) {
     padding-top: 6rem;
@@ -97,14 +101,22 @@ const PageStyles = styled(motion.section)`
     ${media.smallDesktopAndBelow`
     	padding: 80px 60px;
     `}
+    ${media.tabletPortraitAndBelow`
+      padding-left: 20px;
+      padding-right: 20px;
+    `}
   }
 
-	& > .image-block {
-		padding: 8rem 6rem;
-		${media.smallDesktopAndBelow`
+  & > .image-block {
+    padding: 8rem 6rem;
+    ${media.smallDesktopAndBelow`
 			padding: 80px 60px;
 		`}
-	}
+    ${media.tabletPortraitAndBelow`
+      padding-left: 20px;
+      padding-right: 20px;
+    `}
+  }
 
   .image-block .image-wrapper {
     background: ${(props) => props.theme.blue};

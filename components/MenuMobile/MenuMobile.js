@@ -89,7 +89,7 @@ export default function Menu() {
     return null;
   }
 
-	console.log(data);
+  console.log(data);
 
   return (
     <MenuMobileStyles
@@ -112,7 +112,7 @@ export default function Menu() {
                 return null;
               }
               return (
-                <Link href={item?.page?.slug?.current} key={i}>
+                <Link href={item?.page?.slug?.current} key={i} scroll={false}>
                   <a>
                     <span>
                       {item?.linkTitle ||

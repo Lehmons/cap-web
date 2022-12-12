@@ -4,9 +4,8 @@ import Input from "../Input";
 import Button from "../Button";
 import { FormValidation } from "calidation";
 
-
 export default function FormEnquiry() {
-	const formSetStatus = useRef("not set");
+  const formSetStatus = useRef("not set");
   const ref = useRef();
   const rendered = useRef(false);
   const submitRef = useRef();
@@ -45,7 +44,12 @@ export default function FormEnquiry() {
     if (!isValid) {
       return;
     }
-    await sendEnquiry({ email: fields.email, name: fields.name, phone: fields?.phone, teamsProudestMoment: fields?.teamsProudestMoment });
+    await sendEnquiry({
+      email: fields.email,
+      name: fields.name,
+      phone: fields?.phone,
+      teamsProudestMoment: fields?.teamsProudestMoment,
+    });
   };
 
   const onUpdate = ({ setField, submitted, fields }) => {
@@ -72,14 +76,14 @@ export default function FormEnquiry() {
       isRequired: "Please enter your name",
       isMinLength: {
         message: "Please enter a valid name",
-        length: 1
-      }
+        length: 1,
+      },
     },
     email: {
       isRequired: "Please enter your email",
       isEmail: {
-        message: "Please provide a valid email"
-      }
+        message: "Please provide a valid email",
+      },
     },
     phone: {
       isRequired: "Please enter your phone number",
@@ -96,10 +100,10 @@ export default function FormEnquiry() {
       submitRef.current();
     }
   };
-	
-	return (
+
+  return (
     <FormEnquiryStyles>
-			<h2>Free 20 minute consultation</h2>
+      <h2>Free 20 minute consultation</h2>
       <FormValidation
         onSubmit={onSubmit}
         onUpdate={onUpdate}
@@ -116,7 +120,7 @@ export default function FormEnquiry() {
                   autocomplete="name"
                   name="name"
                   title="Name"
-                  autoFocus={true}
+                  autoFocus={false}
                   hasError={submitted && errors?.name ? true : false}
                   error={errors?.name || null}
                 />

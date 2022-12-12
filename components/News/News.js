@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import NewsStyles from "./News.styled";
 import NewsPost from "../NewsPost";
+import FormEnquiry from "../FormEnquiry";
+import Footer from "../Footer";
 
 export default function News({
   pageTransition,
@@ -33,6 +35,8 @@ export default function News({
           showOneImage={false}
         />
       )}
+      <FormEnquiry />
+      <Footer />
     </NewsStyles>
   );
 }

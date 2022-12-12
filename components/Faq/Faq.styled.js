@@ -8,8 +8,8 @@ import { motion } from "framer-motion";
 
 const FaqStyles = styled(motion.section)`
   width: 50%;
-	padding-top: calc(50vh - 8.5rem);
-	${media.smallDesktopAndBelow`
+  padding-top: calc(50vh - 8.5rem);
+  ${media.smallDesktopAndBelow`
 		padding-top: calc(50vh - 85px);
 	`}
   color: ${(props) => props.theme.blue};
@@ -20,15 +20,20 @@ const FaqStyles = styled(motion.section)`
     padding-right: 60px;
       `}
   ${media.tabletPortraitAndBelow`
+      padding-left: 20px;
+      padding-right: 20px;
+    `}
+  ${media.tabletPortraitAndBelow`
     width:100%;
-    padding-top: 338px;
+    padding-top: 0px;
   `}
+  
 
   .faq-title {
-		padding-top: 8rem;
+    padding-top: 8rem;
     color: ${(props) => props.theme.blue};
     font-size: ${font.h1};
-		${media.smallDesktopAndBelow`
+    ${media.smallDesktopAndBelow`
 			padding-top: 80px;
 		`}
   }

@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import FaqStyles from "./Faq.styled";
 import Accordion from "../Accordion";
 import SimpleBlockContent from "../SimpleBlockContent";
+import FormEnquiry from "../FormEnquiry";
+import Footer from "../Footer";
 
 export default function Faq({
   pageTransition,
@@ -61,6 +63,8 @@ export default function Faq({
             ))
           : null}
       </section>
+      <FormEnquiry />
+      <Footer />
     </FaqStyles>
   );
 }

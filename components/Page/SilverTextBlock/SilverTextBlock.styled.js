@@ -23,6 +23,10 @@ const TextBlockStyles = styled.section`
     padding-left: 60px;
     padding-right: 60px;
       `}
+    ${media.tabletPortraitAndBelow`
+      padding-left: 20px;
+      padding-right: 20px;
+    `}
   }
 
   .text h1 {
@@ -80,6 +84,10 @@ const TextBlockStyles = styled.section`
     padding-left: 60px;
     padding-right: 5px;
       `}
+    ${media.tabletPortraitAndBelow`
+      padding-left: 20px;
+      padding-right: 20px;
+    `}
   }
 `;
 

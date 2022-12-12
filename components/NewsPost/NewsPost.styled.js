@@ -16,6 +16,10 @@ const NewsPostStyles = styled(motion.section)`
   ${media.smallDesktopAndBelow`
     padding: 25px 0 80px 0;
   `}
+  ${media.tabletPortraitAndBelow`
+      padding-left: 20px;
+      padding-right: 20px;
+    `}
 
   .news-date p 
   .news-text, h2, h3, ol, ul, a, p, > div {
@@ -25,46 +29,54 @@ const NewsPostStyles = styled(motion.section)`
     font-size: ${font.p};
     line-height: ${font.pLineHeight};
     ${media.smallDesktopAndBelow`
-   	 padding-left: 60px;
-    	padding-right: 60px;
-    	font-size: ${font.pMobile};
+	padding-left: 60px;
+        padding-right: 60px;
+        font-size: ${font.pMobile};
       `}
+    ${media.tabletPortraitAndBelow`
+      padding-left: 20px;
+      padding-right: 20px;
+    `}
   }
 
   .news-text h2 {
-		text-transform: uppercase;
+    text-transform: uppercase;
   }
 
-	.news-text {
-		padding-top: 3.5rem;
-		${media.smallDesktopAndBelow`
+  .news-text {
+    padding-top: 3.5rem;
+    ${media.smallDesktopAndBelow`
 			padding-top: 35px;
 		`}
-	}
+  }
 
-	.news-text div {
-		display: grid;
-		grid-template-columns: repeat(1, 1fr);
-		row-gap: 1.5rem;
-		grid-auto-rows: max-content;
-		${media.smallDesktopAndBelow`
+  .news-text div {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 1.5rem;
+    grid-auto-rows: max-content;
+    ${media.smallDesktopAndBelow`
 			row-gap: 15px;
 		`}
-	}
+  }
 
   .image-block {
     padding: 8rem 6rem 0 6rem;
-		${media.smallDesktopAndBelow`
+    ${media.smallDesktopAndBelow`
 			padding: 80px 60px 0 60px;
 		`}
-	}
+    ${media.tabletPortraitAndBelow`
+      padding-left: 20px;
+      padding-right: 20px;
+    `}
+  }
 
-	.image-block + .image-block {
-		padding-top: 2rem;
-		${media.smallDesktopAndBelow`
+  .image-block + .image-block {
+    padding-top: 2rem;
+    ${media.smallDesktopAndBelow`
 			padding-top: 20px;
 		`}
-	}
+  }
 
   .image-block .image-wrapper {
     background: ${(props) => props.theme.blue};

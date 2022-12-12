@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import NewsOverviewStyles from "./NewsOverview.styled";
 import NewsPost from "../NewsPost";
 import Link from "next/link";
+import FormEnquiry from "../FormEnquiry";
+import Footer from "../Footer";
 
 export default function NewsOverview({
   pageTransition,
@@ -21,9 +23,9 @@ export default function NewsOverview({
       transition={pageTransition}
       className="page news-overview"
     >
-			<section className="news-title">
-				<h1>News</h1>
-			</section>
+      <section className="news-title">
+        <h1>News</h1>
+      </section>
       {posts
         ? posts.map((post, i) => {
             return (
@@ -49,6 +51,8 @@ export default function NewsOverview({
           <div className="linebreaker"></div>
         </>
       )}
+      <FormEnquiry />
+      <Footer />
     </NewsOverviewStyles>
   );
 }

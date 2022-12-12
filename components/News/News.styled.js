@@ -11,7 +11,7 @@ const NewsStyled = styled(motion.section)`
   padding-top: calc(46.5vh - 29rem);
   ${media.tabletPortraitAndBelow`
     width:100%;
-    padding-top: 338px;
+    padding-top: 0px;
   `}// single news post
 `;
 

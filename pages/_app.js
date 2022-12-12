@@ -44,9 +44,6 @@ const pageStyle = {
 
 const MyApp = ({ Component, pageProps, router }) => {
   const onExitComplete = () => {
-    if (router.pathname === "/shop") {
-      return;
-    }
     resetScrollPosition();
   };
 

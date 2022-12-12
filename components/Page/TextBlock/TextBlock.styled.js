@@ -12,7 +12,7 @@ const TextBlockStyles = styled.section`
     padding: 25px 0 0px 0;
   `}
 
-	.text > p,
+  .text > p,
   .text > div {
     color: ${(props) => props.theme.blue};
     padding-left: 6rem;
@@ -21,6 +21,10 @@ const TextBlockStyles = styled.section`
       padding-left: 60px;
       padding-right: 60px;
       `}
+    ${media.tabletPortraitAndBelow`
+      padding-left: 20px;
+      padding-right: 20px;
+    `}
   }
 
   .text h1 {
