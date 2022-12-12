@@ -51,6 +51,7 @@ const DesktopMenuStyled = styled.section`
     `}
   }
 
+	.menu-items a.is-active,
   .menu-items a:hover {
     background: white;
     color: ${(props) => props.theme.blue};

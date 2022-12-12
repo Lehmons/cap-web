@@ -21,6 +21,9 @@ export default function NewsOverview({
       transition={pageTransition}
       className="page news-overview"
     >
+			<section className="news-title">
+				<h1>News</h1>
+			</section>
       {posts
         ? posts.map((post, i) => {
             return (

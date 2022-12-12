@@ -12,6 +12,7 @@ const TextBlockStyles = styled.section`
     padding: 25px 0 0px 0;
   `}
 
+	.text > p,
   .text > div {
     color: ${(props) => props.theme.blue};
     padding-left: 6rem;

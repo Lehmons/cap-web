@@ -8,7 +8,10 @@ import { motion } from "framer-motion";
 
 const FaqStyles = styled(motion.section)`
   width: 50%;
-  padding-top: calc(74.5vh - 29rem);
+	padding-top: calc(50vh - 8.5rem);
+	${media.smallDesktopAndBelow`
+		padding-top: calc(50vh - 85px);
+	`}
   color: ${(props) => props.theme.blue};
   padding-left: 6rem;
   padding-right: 6rem;
@@ -22,8 +25,12 @@ const FaqStyles = styled(motion.section)`
   `}
 
   .faq-title {
+		padding-top: 8rem;
     color: ${(props) => props.theme.blue};
     font-size: ${font.h1};
+		${media.smallDesktopAndBelow`
+			padding-top: 80px;
+		`}
   }
 
   .description {

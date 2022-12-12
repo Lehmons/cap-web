@@ -8,13 +8,13 @@ import { motion } from "framer-motion";
 
 const NewsPostStyles = styled(motion.section)`
   width: 100%;
-  padding: 2.5rem 0 6rem 0;
+  padding: 2.5rem 0 8rem 0;
   ${media.tabletPortraitAndBelow`
     width:100%;
     padding-top: 338px;
   `}
   ${media.smallDesktopAndBelow`
-    padding: 25px 0 60px 0;
+    padding: 25px 0 80px 0;
   `}
 
   .news-date p 
@@ -25,31 +25,46 @@ const NewsPostStyles = styled(motion.section)`
     font-size: ${font.p};
     line-height: ${font.pLineHeight};
     ${media.smallDesktopAndBelow`
-    padding-left: 60px;
-    padding-right: 60px;
-    font-size: ${font.pMobile};
+   	 padding-left: 60px;
+    	padding-right: 60px;
+    	font-size: ${font.pMobile};
       `}
   }
 
   .news-text h2 {
-    padding-bottom: 3rem;
-    ${media.smallDesktopAndBelow`
-    padding-bottom: 30px;
-    `}
+		text-transform: uppercase;
   }
 
-  .news-date p {
-    padding-top: 5rem;
-    padding-bottom: 7rem;
-    ${media.smallDesktopAndBelow`
-    padding-top: 50px;
-    padding-bottom: 70px;
-    `}
-  }
+	.news-text {
+		padding-top: 3.5rem;
+		${media.smallDesktopAndBelow`
+			padding-top: 35px;
+		`}
+	}
+
+	.news-text div {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		row-gap: 1.5rem;
+		grid-auto-rows: max-content;
+		${media.smallDesktopAndBelow`
+			row-gap: 15px;
+		`}
+	}
 
   .image-block {
-    padding: 2.5rem 2rem 6rem 2rem;
-  }
+    padding: 8rem 6rem 0 6rem;
+		${media.smallDesktopAndBelow`
+			padding: 80px 60px 0 60px;
+		`}
+	}
+
+	.image-block + .image-block {
+		padding-top: 2rem;
+		${media.smallDesktopAndBelow`
+			padding-top: 20px;
+		`}
+	}
 
   .image-block .image-wrapper {
     background: ${(props) => props.theme.blue};

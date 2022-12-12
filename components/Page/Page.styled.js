@@ -8,7 +8,10 @@ import { motion } from "framer-motion";
 
 const PageStyles = styled(motion.section)`
   width: 50%;
-  padding-top: calc(74.5vh - 29rem);
+  padding-top: calc(50vh - 8.5rem);
+	${media.smallDesktopAndBelow`
+		padding-top: calc(50vh - 85px);
+	`}
   ${media.tabletPortraitAndBelow`
     width:100%;
     padding-top: 338px;
@@ -89,12 +92,19 @@ const PageStyles = styled(motion.section)`
     `}
   }
 
-  .image-block {
-    padding: 8rem 6rem 8rem 6rem;
+  .page-text .image-block {
+    padding: 8rem 6rem;
     ${media.smallDesktopAndBelow`
-    padding: 80px 60px 80px 60px;
-      `}
+    	padding: 80px 60px;
+    `}
   }
+
+	& > .image-block {
+		padding: 8rem 6rem;
+		${media.smallDesktopAndBelow`
+			padding: 80px 60px;
+		`}
+	}
 
   .image-block .image-wrapper {
     background: ${(props) => props.theme.blue};
@@ -114,7 +124,7 @@ const PageStyles = styled(motion.section)`
     height: 100%;
   }
 
-  .linkedPage linktitle {
+  .linkedPage .linktitle {
     display: flex;
     width: 100%;
     justify-content: space-between;

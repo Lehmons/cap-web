@@ -4,6 +4,7 @@ import Link from "next/link";
 import groq from "groq";
 import { getClient } from "../../lib/sanity.server";
 import NavShimmer from "../NavShimmer";
+import { useRouter } from 'next/router';
 
 // query
 const query = groq`*[_type == 'menu'][0]{
@@ -24,6 +25,7 @@ const query = groq`*[_type == 'menu'][0]{
 export default function menu() {
   const [data, setData] = useState();
   const preview = false;
+	const router = useRouter();
 
   const setup = async () => {
     const newData = await getClient(preview).fetch(query); // fetches the data
@@ -45,13 +47,12 @@ export default function menu() {
       <div className="menu-items">
         {data
           ? data?.menu?.map((item, i) => {
-              console.log(item);
               if (!item?.page?.slug?.current) {
                 return null;
               }
               return (
                 <Link href={item?.page?.slug?.current} key={i}>
-                  <a>
+                  <a className={item?.page?.slug?.current === router?.asPath || item?.page?.slug?.current.includes('news') && router?.asPath?.includes('news') ? 'is-active' : ''}>
                     <span>
                       {item?.linkTitle ||
                         item?.page?.title ||
