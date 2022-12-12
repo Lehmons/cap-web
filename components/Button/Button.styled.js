@@ -19,6 +19,7 @@ const ButtonStyles = styled.button`
     padding: 1rem 2.2rem 1.1rem 2.2rem;
     width: 100%;
     border: 1px solid ${(props) => props.theme.blue};
+		color: ${(props) => props.theme.blue};
     ${media.smallDesktopAndBelow`
       padding: 10px 22px 11px 22px;
 		`}
@@ -31,9 +32,10 @@ const ButtonStyles = styled.button`
     color: ${(props) => props.theme.blue};
   }
 
-  &.primary:hover span {
-    color: ${(props) => props.theme.blue};
-  }
+	&.primary:hover {
+		color: white;
+		background: ${props => props.theme.blue};
+	}
 
   &:hover {
     cursor: pointer;

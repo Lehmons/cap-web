@@ -112,6 +112,32 @@ const GlobalStyles = createGlobalStyle`
 		margin-left: auto;
 		margin-right: auto;
 	}
+
+	fieldset {
+		border: 0;
+	}
+
+	.cta {
+		font-size: ${font.p};
+		transition: color 0.25s ease-in-out, background 0.25s ease-in-out;
+		padding: 1rem 2.2rem 1.1rem 2.2rem;
+    width: 100%;
+    border: 1px solid ${(props) => props.theme.blue};
+		color: ${(props) => props.theme.blue};
+		${media.smallDesktopAndBelow`
+			font-size: ${font.pMobile};
+			padding: 10px 22px 11px 22px;
+		`}
+	}
+
+  .cta:hover {
+    color: white;
+		background: ${props => props.theme.blue};
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export default GlobalStyles;

@@ -41,6 +41,7 @@ const DesktopMenuStyled = styled.section`
     border: 1px solid white;
     margin: 0.9rem;
     font-size: ${font.smallP};
+		transition: color 0.25s ease-in-out, background 0.25s ease-in-out;
     ${media.smallDesktopAndBelow`
       padding: 6px 9px;
       margin: 9px;

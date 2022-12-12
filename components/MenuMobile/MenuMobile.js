@@ -10,7 +10,6 @@ import useKeyPress from "../../lib/useKeyPress";
 
 // query
 const query = groq`*[_type == 'menu'][0]{
-  ...,
   menu[]{
     ...,
     page->{title, slug} 
@@ -90,6 +89,8 @@ export default function Menu() {
     return null;
   }
 
+	console.log(data);
+
   return (
     <MenuMobileStyles
       className="mobile-menu"
@@ -107,11 +108,11 @@ export default function Menu() {
         {data
           ? data?.menu?.map((item, i) => {
               console.log(item);
-              if (!item?.linkedPage?.page?.slug?.current) {
+              if (!item?.page?.slug?.current) {
                 return null;
               }
               return (
-                <Link href={item?.linkedPage?.page?.slug?.current} key={i}>
+                <Link href={item?.page?.slug?.current} key={i}>
                   <a>
                     <span>
                       {item?.linkTitle ||

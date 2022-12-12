@@ -6,6 +6,8 @@ import SilverTextBlock from "./SilverTextBlock";
 import ImageBlock from "../ImageBlock";
 import ImageTextBlock from "../ImageTextBlock";
 import ImageTextBlockBlue from "../ImageTextBlockBlue";
+import FormEnquiry from "../FormEnquiry";
+import Footer from "../Footer";
 
 export default function Page({
   pageTransition,
@@ -94,6 +96,8 @@ export default function Page({
             }
           })
         : null}
+				<FormEnquiry/>
+				<Footer/>
     </PageStyles>
   );
 }
