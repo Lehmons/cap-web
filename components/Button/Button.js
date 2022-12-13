@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import ButtonStyles from "./Button.styled";
 import rawMarkup from "../../lib/rawMarkup";
 
