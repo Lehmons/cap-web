@@ -16,10 +16,7 @@ const PageStyles = styled(motion.section)`
     width:100%;
     padding-top: 0;
   `}
-  ${media.tabletPortraitAndBelow`
-      padding-left: 20px;
-      padding-right: 20px;
-    `}
+
 
   & > .page-text:nth-child(n+2) {
     padding-top: 6rem;
