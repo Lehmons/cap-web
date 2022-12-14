@@ -10,7 +10,6 @@ import FormEnquiry from "../FormEnquiry";
 import Footer from "../Footer";
 
 export default function Page({
-  lineBreaker,
   pageTransition,
   pageVariants,
   pageStyle,
