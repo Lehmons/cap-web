@@ -89,6 +89,42 @@ const TextBlockStyles = styled.section`
       padding-right: 20px;
     `}
   }
+
+  ul {
+    font-size: ${font.p};
+    color: black;
+    line-height: 2.9rem;
+    text-transform: uppercase;
+    ${media.smallDesktopAndBelow`
+      font-size: ${font.pMobile};
+			line-height: 29px;
+    `}
+  }
+
+  ul li {
+    position: relative;
+    padding-left: 2rem;
+    color: black;
+    ${media.smallDesktopAndBelow`
+      padding-left: 20px;
+    `}
+  }
+
+  ul li:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 10px;
+    left: 2px;
+    background: black;
+    transform: rotate(-45deg);
+    ${media.tabletPortraitAndBelow`
+      background: white;
+			border: black;
+    `}
+  }
 `;
 
 export default TextBlockStyles;
