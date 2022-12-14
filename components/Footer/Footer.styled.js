@@ -6,12 +6,12 @@ import styled from "styled-components";
 import { font, media, underline } from "../Styles";
 
 const FooterStyles = styled.section`
-  padding: 4rem 6rem 6rem 6rem;
+  padding: 5.8rem 6rem 6rem 6rem;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   row-gap: 4rem;
   ${media.smallDesktopAndBelow`
-		padding: 40px 60px 60px 60px;
+		padding: 58px 60px 60px 60px;
 		row-gap: 40px;
 	`}
 

@@ -10,6 +10,7 @@ import FormEnquiry from "../FormEnquiry";
 import Footer from "../Footer";
 
 export default function Page({
+  lineBreaker,
   pageTransition,
   pageVariants,
   pageStyle,
@@ -96,8 +97,15 @@ export default function Page({
             }
           })
         : null}
-				<FormEnquiry/>
-				<Footer/>
+      <FormEnquiry />
+      {
+        <>
+          <div className="linebreaker"></div>
+          <div className="linebreaker"></div>
+          <div className="linebreaker"></div>
+        </>
+      }
+      <Footer />
     </PageStyles>
   );
 }

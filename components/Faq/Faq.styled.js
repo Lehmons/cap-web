@@ -56,6 +56,38 @@ const FaqStyles = styled(motion.section)`
   .accordion-container > :first-child {
     border-top: 1px solid ${(props) => props.theme.blue};
   }
+
+  ul li {
+    position: relative;
+    padding-left: 2rem;
+    ${media.smallDesktopAndBelow`
+      padding-left: 20px;
+    `}
+  }
+
+  ul li:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 10px;
+    left: 2px;
+    background: ${(props) => props.theme.blue};
+    transform: rotate(-45deg);
+    ${media.tabletPortraitAndBelow`
+      background: white;
+			border: 1px solid ${(props) => props.theme.blue};
+    `}
+  }
+
+  & > ul,
+  li:nth-of-type(1) {
+    margin-top: 1.4rem;
+    ${media.smallDesktopAndBelow`
+    margin-top: 14px;
+      `}
+  }
 `;
 
 export default FaqStyles;

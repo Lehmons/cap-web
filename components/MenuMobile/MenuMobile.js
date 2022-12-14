@@ -113,7 +113,7 @@ export default function Menu() {
               }
               return (
                 <Link href={item?.page?.slug?.current} key={i} scroll={false}>
-                  <a>
+                  <a onClick={onNavigate}>
                     <span>
                       {item?.linkTitle ||
                         item?.page?.title ||

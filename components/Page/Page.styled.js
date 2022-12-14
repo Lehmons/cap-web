@@ -155,6 +155,20 @@ const PageStyles = styled(motion.section)`
       margin: 0px;
     `}
   }
+
+  .linebreaker {
+    padding-top: 0.5rem;
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px solid ${(props) => props.theme.blue};
+  }
+
+  & > .linebreaker:nth-of-type(1) {
+    margin-top: 1.2rem;
+    ${media.smallDesktopAndBelow`
+    margin-top: 12px;
+      `}
+  }
 `;
 
 export default PageStyles;
