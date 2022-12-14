@@ -177,13 +177,15 @@ const AccordionStyles = styled.section`
   ul li:before {
     position: absolute;
     left: -10px;
-    top: 50%;
+    top: 1.3rem;
     width: 7px;
     height: 1px;
     background: blue;
     display: block;
-    transform: translateY(calc(-50% - 1px));
     content: "";
+    ${media.smallDesktopAndBelow`
+      top: 13px;
+    `}
   }
 `;
 

@@ -65,28 +65,20 @@ const FaqStyles = styled(motion.section)`
     `}
   }
 
-  ul li:before {
-    display: block;
-    content: "";
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    top: 10px;
-    left: 2px;
-    background: ${(props) => props.theme.blue};
-    transform: rotate(-45deg);
-    ${media.tabletPortraitAndBelow`
-      background: white;
-			border: 1px solid ${(props) => props.theme.blue};
-    `}
-  }
-
-  & > ul,
-  li:nth-of-type(1) {
+  & > ul {
     margin-top: 1.4rem;
     ${media.smallDesktopAndBelow`
     margin-top: 14px;
       `}
+  }
+
+  .faq-p div {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 0.8rem;
+    ${media.smallDesktopAndBelow`
+      row-gap: 8px;
+    `}
   }
 `;
 
