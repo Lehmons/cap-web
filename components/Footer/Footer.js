@@ -42,7 +42,7 @@ export default function Footer() {
             0800 086 2760
           </a>
           <a className="cta" href="mailto:info@capawards.co.uk?subject=Enquiry">
-            info@capawards.co.uk
+            hq@capaward.co.uk
           </a>
         </section>
       </section>

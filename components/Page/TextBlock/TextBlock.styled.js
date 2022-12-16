@@ -42,6 +42,10 @@ const TextBlockStyles = styled.section`
     `}
   }
 
+  .text a {
+    border-bottom: 1px solid;
+  }
+
   ul {
     font-size: ${font.p};
     line-height: 2.9rem;
@@ -83,7 +87,7 @@ const TextBlockStyles = styled.section`
     margin-top: 2.5rem;
     width: auto;
     ${media.smallDesktopAndBelow`
-      font-size: ${font.smallPMobile};
+      font-size: ${font.pMobile};
       margin-top: 25px;
     `}
   }
@@ -95,6 +99,10 @@ const TextBlockStyles = styled.section`
     ${media.smallDesktopAndBelow`
       margin-top: 6px;
     `}
+    ${media.tabletPortraitAndBelow`
+    height: 10px;
+    width: 20px;
+    `}
   }
 
   .linked-page svg path {
@@ -103,12 +111,16 @@ const TextBlockStyles = styled.section`
 
   .linked-page span {
     display: inline-block;
-    padding-left: 6rem;
+    padding-left: 5.9rem;
     padding-right: 0.5rem;
     ${media.smallDesktopAndBelow`
-    padding-left: 60px;
+    padding-left: 59px;
     padding-right: 5px;
       `}
+    ${media.tabletPortraitAndBelow`
+      padding-left: 20px;
+      padding-right: 2px;
+    `}
   }
 
   & > .linebreaker:nth-of-type(1) {
