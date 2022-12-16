@@ -8,6 +8,7 @@ import ImageTextBlock from "../ImageTextBlock";
 import ImageTextBlockBlue from "../ImageTextBlockBlue";
 import FormEnquiry from "../FormEnquiry";
 import Footer from "../Footer";
+import Quote from "./Quote";
 
 export default function Page({
   lineBreaker,
@@ -16,6 +17,8 @@ export default function Page({
   pageStyle,
   blocks,
 }) {
+
+  console.log(blocks);
   return (
     <HomeStyles
       key={"home"}
@@ -36,6 +39,14 @@ export default function Page({
                   paragraph={block?.paragraph}
                   lineBreaker={block?.lineBreaker}
                   linkedPage={block?.linkedPage}
+                />
+              );
+            }
+            if (block?._type == "quotes") {
+              return (
+                <Quote
+                  key={i}
+                  quote={block?.quote}
                 />
               );
             }

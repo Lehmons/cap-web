@@ -16,15 +16,13 @@ const HomeStyles = styled(motion.section)`
     width:100%;
     padding-top: 0;
   `}
-  ${media.tabletPortraitAndBelow`
-      padding-left: 20px;
-      padding-right: 20px;
-    `}
-
   & > .page-text:nth-child(n+2) {
     padding-top: 6rem;
     ${media.smallDesktopAndBelow`
       padding-top: 60px;
+    `}
+    ${media.tabletPortraitAndBelow`
+      padding-top: 20px;
     `}
   }
 
@@ -163,8 +161,8 @@ const HomeStyles = styled(motion.section)`
     margin-top: 2.5rem;
     width: auto;
     ${media.smallDesktopAndBelow`
-      font-size: ${font.smallPMobile};
       margin-top: 25px;
+      font-size: ${font.pMobile};
     `}
   }
 
@@ -176,6 +174,9 @@ const HomeStyles = styled(motion.section)`
     display: inline-block;
     ${media.smallDesktopAndBelow`
       margin-top: 5px;
+    `}
+    ${media.tabletPortraitAndBelow`
+      margin-top: 3px;
     `}
   }
 
@@ -191,6 +192,9 @@ const HomeStyles = styled(motion.section)`
     padding-left: 60px;
     padding-right: 5px;
       `}
+    ${media.tabletPortraitAndBelow`
+      padding-left: 20px;
+    `}
   }
 
   & > .linebreaker:nth-of-type(1) {

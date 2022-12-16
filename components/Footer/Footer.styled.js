@@ -14,6 +14,10 @@ const FooterStyles = styled.section`
 		padding: 58px 60px 60px 60px;
 		row-gap: 40px;
 	`}
+  ${media.tabletPortraitAndBelow`
+    padding-left: 20px;
+    padding-right: 20px;
+  `}
 
   span {
     display: block;

@@ -8,15 +8,14 @@ import { font, media, underline } from "../Styles";
 const ImageTextBlockStyles = styled.section`
   position: relative;
   width: 100%;
-  min-height: 80rem;
+  min-height: 80vh;
   padding-bottom: 6rem;
   ${media.smallDesktopAndBelow`
-    min-height: 800px;
+    
     padding-bottom: 60px;
   `}
 
   p {
-    margin-top: 1.2rem;
     font-family: ${font.family200};
     @supports (font-variation-settings: normal) {
       font-family: ${font.family200VF};
@@ -24,7 +23,6 @@ const ImageTextBlockStyles = styled.section`
     font-size: ${font.smallP};
     line-height: ${font.pLineHeight};
     ${media.smallDesktopAndBelow`
-      margin-top: 12px;
       font-size: ${font.smallPMobile};
     `}
   }

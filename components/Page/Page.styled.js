@@ -23,6 +23,9 @@ const PageStyles = styled(motion.section)`
     ${media.smallDesktopAndBelow`
       padding-top: 60px;
     `}
+    ${media.tabletPortraitAndBelow`
+      padding-top: 20px;
+    `}
   }
 
   .text div {
@@ -111,6 +114,9 @@ const PageStyles = styled(motion.section)`
       height: 10px;
       width: 20px;
     `}
+    ${media.tabletPortraitAndBelow`
+      margin-top: 0;
+    `}
   }
 
   .linked-page svg path {
@@ -195,6 +201,32 @@ const PageStyles = styled(motion.section)`
     ${media.tabletPortraitAndBelow`
       padding: 38px 9px;
       margin: 0px;
+    `}
+  }
+
+  .linked-page {
+    color: ${(props) => props.theme.blue};
+    font-size: ${font.p};
+    display: flex;
+    margin-top: 2.5rem;
+    width: auto;
+    ${media.smallDesktopAndBelow`
+      margin-top: 25px;
+      font-size: ${font.pMobile};
+    `}
+  }
+
+  .linked-page svg {
+    position: relative;
+    height: 14px;
+    width: 25px;
+    margin-top: 0.5rem;
+    display: inline-block;
+    ${media.smallDesktopAndBelow`
+      margin-top: 5px;
+    `}
+    ${media.tabletPortraitAndBelow`
+      margin-top: 3px;
     `}
   }
 

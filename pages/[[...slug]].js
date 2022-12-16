@@ -7,6 +7,7 @@ const PageComponent = dynamic(() => import("../components/Page"));
 const News = dynamic(() => import("../components/News"));
 const NewsOverview = dynamic(() => import("../components/NewsOverview"));
 const Faq = dynamic(() => import("../components/Faq"));
+import Head from 'next/head';
 
 export default function Page({
   data,
@@ -26,6 +27,9 @@ export default function Page({
   // 4. Return the correct component based on the docType
   return (
     <>
+      <Head>
+        <title>{previewData?.title || 'Cap'} | CAP Awards</title>
+      </Head>
       {docType === "home" && (
         <Home
           pageStyle={pageStyle}

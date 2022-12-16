@@ -19,7 +19,7 @@ const font = {
   statMobile: "48px",
   h1: "4rem",
   h1Tablet: "40px",
-  h1Mobile: "24px",
+  h1Mobile: "30px",
   h2: "2.3rem",
   h2Tablet: "23px",
   h2Mobile: "20px",

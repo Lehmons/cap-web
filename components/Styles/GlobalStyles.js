@@ -192,6 +192,12 @@ const GlobalStyles = createGlobalStyle`
     height: 1px;
     border-bottom: 1px solid ${(props) => props.theme.blue};
   }
+
+  q::before,
+	q > p,
+	q::after{
+		display: inline;
+	}
 `;
 
 export default GlobalStyles;

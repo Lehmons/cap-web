@@ -7,12 +7,12 @@ import { font, media } from "../../Styles";
 
 const TextBlockStyles = styled.section`
   width: 100%;
-  min-height: 80rem;
+  min-height: 80vh;
   padding: 2.5rem 0 6rem 0;
   background: ${(props) => props.theme.blue};
   ${media.smallDesktopAndBelow`
     padding: 25px 0 60px 0;
-    min-height: 800px;
+    
   `}
 
   .text > div {
