@@ -4,18 +4,19 @@ import SimpleBlockContent from "../SimpleBlockContent";
 import ImageBlock from "../ImageBlock";
 import useWindowSize from "~/lib/useWindowSize";
 import Link from "next/link";
+import Chevron from "./chevron.svg";
 
-import { urlFor, urlPortraitFor } from "../../lib/sanity";
 
 export default function ImageTextBlock({
   image,
   lineBreaker,
-  paragraph
+  paragraph,
+  linkedPage
 }) {
   
   return (
     <ImageTextBlockStyles
-      className={`page-text ${lineBreaker ? "is-linebreaker" : ""}`}
+      className={`image-text ${lineBreaker ? "is-linebreaker" : ""}`}
     >
       {image && (
         <ImageBlock
@@ -30,6 +31,18 @@ export default function ImageTextBlock({
         <section className="text">
           <SimpleBlockContent blocks={paragraph} />
         </section>
+      )}
+      {linkedPage && linkedPage?.page?.slug?.current && (
+        <Link href={linkedPage?.page?.slug?.current} scroll={false}>
+          <a className="linked-page">
+            <span>
+              {linkedPage?.linkTitle ||
+                linkedPage?.page?.title ||
+                "Missing page title"}
+            </span>
+            <Chevron />
+          </a>
+        </Link>
       )}
       {lineBreaker && (
         <>

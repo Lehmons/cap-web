@@ -34,6 +34,7 @@ export default function Faq({
       transition={pageTransition}
       className="page faq"
     >
+      <section className="wrapper">
       {title && (
         <section className="faq-title">
           <h1>{title}</h1>
@@ -62,6 +63,7 @@ export default function Faq({
               </Accordion>
             ))
           : null}
+        </section>
       </section>
       <FormEnquiry />
       <Footer />

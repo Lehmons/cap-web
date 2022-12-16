@@ -15,7 +15,7 @@ export default function NavShimmer({ shimmer }) {
       clearTimeout(timer.current); //Clear time out
       timer.current = setTimeout(() => {
         setIsScrolling(false);
-      }, 250);
+      }, 120);
     }
 
     document.addEventListener("scroll", onScroll, { passive: true });

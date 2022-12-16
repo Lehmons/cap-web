@@ -6,14 +6,17 @@ import styled from "styled-components";
 import { font, media, underline } from "../Styles";
 
 const FormEnquiryStyles = styled.section`
-  padding: 4rem 6rem 8rem 6rem;
-  ${media.smallDesktopAndBelow`
-		padding: 40px 60px 80px 60px;
-	`}
-  ${media.tabletPortraitAndBelow`
+  .wrapper {
+    padding: 12rem 6rem 8rem 6rem;
+    ${media.smallDesktopAndBelow`
+      padding: 120px 60px 80px 60px;
+    `}
+    ${media.tabletPortraitAndBelow`
+      padding-top: 60px;
       padding-left: 20px;
       padding-right: 20px;
     `}
+  }
 
 	h2 {
     text-transform: uppercase;

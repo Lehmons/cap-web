@@ -156,11 +156,41 @@ const HomeStyles = styled(motion.section)`
     `}
   }
 
-  .linebreaker {
-    padding-top: 0.5rem;
-    width: 100%;
-    height: 1px;
-    border-bottom: 1px solid ${(props) => props.theme.blue};
+  .linked-page {
+    color: ${(props) => props.theme.blue};
+    font-size: ${font.p};
+    display: flex;
+    margin-top: 2.5rem;
+    width: auto;
+    ${media.smallDesktopAndBelow`
+      font-size: ${font.smallPMobile};
+      margin-top: 25px;
+    `}
+  }
+
+  .linked-page svg {
+    position: relative;
+    height: 14px;
+    width: 25px;
+    margin-top: 0.5rem;
+    display: inline-block;
+    ${media.smallDesktopAndBelow`
+      margin-top: 5px;
+    `}
+  }
+
+  .linked-page svg path {
+    stroke: ${(props) => props.theme.blue};
+  }
+
+  .linked-page span {
+    display: inline-block;
+    padding-left: 6rem;
+    padding-right: 0.5rem;
+    ${media.smallDesktopAndBelow`
+    padding-left: 60px;
+    padding-right: 5px;
+      `}
   }
 
   & > .linebreaker:nth-of-type(1) {

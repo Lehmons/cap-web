@@ -28,8 +28,8 @@ const DesktopMenuStyled = styled.section`
     justify-content: center;
     width: 100%;
     height: 100%;
-    ${media.smallDesktopAndBelow`
-      display: flex;
+    ${media.tabletLandscapeAndBelow`
+      flex-direction: column;
     `}
   }
 
@@ -40,12 +40,12 @@ const DesktopMenuStyled = styled.section`
     text-transform: uppercase;
     border: 1px solid white;
     margin: 0.9rem;
-    font-size: ${font.smallP};
+    font-size: 1.2rem;
 		transition: color 0.25s ease-in-out, background 0.25s ease-in-out;
     ${media.smallDesktopAndBelow`
       padding: 6px 9px;
       margin: 9px;
-      font-size: ${font.smallPMobile};
+      font-size: 12px;
     `}
     ${media.tabletPortraitAndBelow`
       display: none;

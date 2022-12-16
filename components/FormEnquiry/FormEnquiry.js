@@ -103,6 +103,7 @@ export default function FormEnquiry() {
 
   return (
     <FormEnquiryStyles>
+      <section className="wrapper">
       <h2>Free 20 minute consultation</h2>
       <FormValidation
         onSubmit={onSubmit}
@@ -155,6 +156,10 @@ export default function FormEnquiry() {
           );
         }}
       </FormValidation>
+      </section>
+      <div className="linebreaker"></div>
+      <div className="linebreaker"></div>
+      <div className="linebreaker"></div>
     </FormEnquiryStyles>
   );
 }

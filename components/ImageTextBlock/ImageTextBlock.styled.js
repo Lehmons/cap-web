@@ -9,8 +9,10 @@ const ImageTextBlockStyles = styled.section`
   position: relative;
   width: 100%;
   min-height: 80rem;
+  padding-bottom: 6rem;
   ${media.smallDesktopAndBelow`
     min-height: 800px;
+    padding-bottom: 60px;
   `}
 
   p {
@@ -29,12 +31,11 @@ const ImageTextBlockStyles = styled.section`
 
   .text {
     color: ${(props) => props.theme.blue};
-    padding: 2.5rem 6rem 6rem 6rem;
+    padding: 2.5rem 6rem 0 6rem;
     ${media.smallDesktopAndBelow`
     padding-top: 25px;
     padding-left: 60px;
     padding-right: 60px;
-    padding-bottom: 60px;
   `}
     ${media.tabletLandscapeAndBelow`
     padding-left: ${(props) => props.theme.sitePaddingLeftRightMobile};
@@ -50,45 +51,23 @@ const ImageTextBlockStyles = styled.section`
     `}
   }
 
-  ul {
-    font-size: ${font.p};
-    line-height: 2.9rem;
-    text-transform: uppercase;
-    ${media.smallDesktopAndBelow`
-      font-size: ${font.pMobile};
-			line-height: 29px;
-    `}
-  }
 
-  ul li {
-    position: relative;
-    padding-left: 2rem;
+  .image-block {
+    padding: 8rem 6rem 2rem 6rem;
     ${media.smallDesktopAndBelow`
-      padding-left: 20px;
+    padding: 8rem 6rem 20px 6rem;
     `}
-  }
-
-  ul li:before {
-    display: block;
-    content: "";
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    top: 10px;
-    left: 2px;
-    background: ${(props) => props.theme.blue};
-    transform: rotate(-45deg);
     ${media.tabletPortraitAndBelow`
-      background: white;
-			border: 1px solid ${(props) => props.theme.blue};
+      padding-left: 20px;
+      padding-right: 20px;
     `}
   }
 
-  .linebreaker {
-    padding-top: 0.5rem;
-    width: 100%;
-    height: 1px;
-    border-bottom: 1px solid ${(props) => props.theme.blue};
+  & > .linebreaker:nth-of-type(1) {
+    margin-top: 6.6rem;
+    ${media.smallDesktopAndBelow`
+    margin-top: 66px;
+      `}
   }
 `;
 

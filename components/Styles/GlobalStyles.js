@@ -135,8 +135,62 @@ const GlobalStyles = createGlobalStyle`
 		background: ${props => props.theme.blue};
   }
 
-  &:hover {
-    cursor: pointer;
+  ul,
+  ol {
+    position: relative;
+  }
+
+  ul, ol {
+    font-size: ${font.p};
+    line-height: 2.9rem;
+    text-transform: uppercase;
+    ${media.smallDesktopAndBelow`
+      font-size: ${font.pMobile};
+			line-height: 29px;
+    `}
+  }
+
+  ol li,
+  ul li {
+    position: relative;
+    padding-left: 2rem;
+    ${media.smallDesktopAndBelow`
+      padding-left: 20px;
+    `}
+  }
+
+  li + li {
+    margin-top: 0.7rem;
+    ${media.smallDesktopAndBelow`
+      margin-top: 7px;
+    `}
+  }
+
+  ol li,
+  ul li:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    top: 0.8rem;
+    left: 0.2rem;
+    background: white;
+    border: 1px solid ${(props) => props.theme.blue};
+    transform: rotate(-45deg);
+    ${media.smallDesktopAndBelow`
+      width: 10px;
+      height: 10px;
+      top: 8px;
+      left: 2px;
+    `}
+  }
+
+  .linebreaker {
+    padding-top: 0.5rem;
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px solid ${(props) => props.theme.blue};
   }
 `;
 

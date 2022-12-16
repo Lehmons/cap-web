@@ -59,42 +59,6 @@ const ImageTextBlockStyles = styled.section`
     color: white;
     background: ${(props) => props.theme.blue};
   }
-
-  ul {
-    color: white;
-    font-size: ${font.p};
-    line-height: 2.9rem;
-    text-transform: uppercase;
-    ${media.smallDesktopAndBelow`
-      font-size: ${font.pMobile};
-			line-height: 29px;
-    `}
-  }
-
-  ul li {
-    color: white;
-    position: relative;
-    padding-left: 2rem;
-    ${media.smallDesktopAndBelow`
-      padding-left: 20px;
-    `}
-  }
-
-  ul li:before {
-    display: block;
-    position: absolute;
-    content: "";
-    width: 10px;
-    height: 10px;
-    top: 10px;
-    left: 2px;
-    background: white;
-    transform: rotate(-45deg);
-    ${media.tabletPortraitAndBelow`
-      background: ${(props) => props.theme.blue};
-			border: 1px solid white;
-    `}
-  }
 `;
 
 export default ImageTextBlockStyles;

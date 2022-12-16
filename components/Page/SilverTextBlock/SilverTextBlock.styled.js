@@ -51,31 +51,6 @@ const TextBlockStyles = styled.section`
     background: ${(props) => props.theme.blue};
   }
 
-  .linked-page {
-    color: black;
-    font-size: ${font.p};
-    display: inline-block;
-    margin-top: 2.5rem;
-    width: auto;
-    ${media.smallDesktopAndBelow`
-      font-size: ${font.smallPMobile};
-      margin-top: 25px;
-    `}
-  }
-
-  .linked-page svg {
-    height: 14px;
-    width: 25px;
-    margin-top: 0.6rem;
-    ${media.smallDesktopAndBelow`
-      margin-top: 6px;
-    `}
-  }
-
-  .linked-page svg path {
-    stroke: black;
-  }
-
   .linked-page span {
     display: inline-block;
     padding-left: 6rem;
@@ -87,42 +62,6 @@ const TextBlockStyles = styled.section`
     ${media.tabletPortraitAndBelow`
       padding-left: 20px;
       padding-right: 20px;
-    `}
-  }
-
-  ul {
-    font-size: ${font.p};
-    color: black;
-    line-height: 2.9rem;
-    text-transform: uppercase;
-    ${media.smallDesktopAndBelow`
-      font-size: ${font.pMobile};
-			line-height: 29px;
-    `}
-  }
-
-  ul li {
-    position: relative;
-    padding-left: 2rem;
-    color: black;
-    ${media.smallDesktopAndBelow`
-      padding-left: 20px;
-    `}
-  }
-
-  ul li:before {
-    display: block;
-    content: "";
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    top: 10px;
-    left: 2px;
-    background: black;
-    transform: rotate(-45deg);
-    ${media.tabletPortraitAndBelow`
-      background: white;
-			border: black;
     `}
   }
 `;

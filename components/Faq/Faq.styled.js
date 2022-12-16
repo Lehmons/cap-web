@@ -13,20 +13,23 @@ const FaqStyles = styled(motion.section)`
 		padding-top: calc(50vh - 85px);
 	`}
   color: ${(props) => props.theme.blue};
-  padding-left: 6rem;
-  padding-right: 6rem;
-  ${media.smallDesktopAndBelow`
-    padding-left: 60px;
-    padding-right: 60px;
-      `}
-  ${media.tabletPortraitAndBelow`
-      padding-left: 20px;
-      padding-right: 20px;
-    `}
   ${media.tabletPortraitAndBelow`
     width:100%;
     padding-top: 0px;
   `}
+
+  .wrapper {
+    padding-left: 6rem;
+    padding-right: 6rem;
+    ${media.smallDesktopAndBelow`
+      padding-left: 60px;
+      padding-right: 60px;
+        `}
+    ${media.tabletPortraitAndBelow`
+        padding-left: 20px;
+        padding-right: 20px;
+      `}
+  }
   
 
   .faq-title {
@@ -57,20 +60,6 @@ const FaqStyles = styled(motion.section)`
     border-top: 1px solid ${(props) => props.theme.blue};
   }
 
-  ul li {
-    position: relative;
-    padding-left: 2rem;
-    ${media.smallDesktopAndBelow`
-      padding-left: 20px;
-    `}
-  }
-
-  & > ul {
-    margin-top: 1.4rem;
-    ${media.smallDesktopAndBelow`
-    margin-top: 14px;
-      `}
-  }
 
   .faq-p div {
     display: grid;

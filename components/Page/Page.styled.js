@@ -86,6 +86,51 @@ const PageStyles = styled(motion.section)`
     `}
   }
 
+  .linked-page {
+    color: ${(props) => props.theme.blue};
+    font-size: ${font.p};
+    display: inline-block;
+    margin-top: 2.5rem;
+    width: auto;
+    ${media.smallDesktopAndBelow`
+      font-size: ${font.pMobile};
+      margin-top: 25px;
+    `}
+  }
+
+  .linked-page svg {
+    position: relative;
+    display: inline-block;
+    height: 14px;
+    width: 25px;
+    margin-top: 0.8rem;
+    ${media.smallDesktopAndBelow`
+      margin-top: 8px;
+    `}
+    ${media.tabletPortraitAndBelow`
+      height: 10px;
+      width: 20px;
+    `}
+  }
+
+  .linked-page svg path {
+    stroke: ${(props) => props.theme.blue};
+  }
+
+  .linked-page span {
+    display: inline-block;
+    padding-left: 5.9rem;
+    padding-right: 0.5rem;
+    ${media.smallDesktopAndBelow`
+    padding-left: 59px;
+    padding-right: 5px;
+      `}
+    ${media.tabletPortraitAndBelow`
+      padding-left: 20px;
+      padding-right: 2px;
+    `}
+  }
+
   & > .page-text:nth-child(1) {
     padding-top: 8rem;
     ${media.tabletLandscapeAndBelow`
@@ -151,13 +196,6 @@ const PageStyles = styled(motion.section)`
       padding: 38px 9px;
       margin: 0px;
     `}
-  }
-
-  .linebreaker {
-    padding-top: 0.5rem;
-    width: 100%;
-    height: 1px;
-    border-bottom: 1px solid ${(props) => props.theme.blue};
   }
 
   & > .linebreaker:nth-of-type(1) {

@@ -13,10 +13,10 @@ const NavShimmerStyles = styled.section`
   height: 100%;
   pointer-events: none;
   transition: opacity 0.8s ease-in-out;
-  opacity: 0.8;
+  opacity: 0.2;
 
   &.is-not-scrolling {
-    opacity: 0;
+    opacity: 0.1;
   }
 
   .image-block,

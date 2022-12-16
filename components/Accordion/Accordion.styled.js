@@ -153,40 +153,6 @@ const AccordionStyles = styled.section`
       padding-bottom: 40px;
     `};
   }
-
-  ul,
-  ol {
-    position: relative;
-  }
-
-  ol {
-    padding-left: 17px;
-  }
-
-  ul {
-    padding-left: 10px;
-    ${media.smallDesktopAndBelow`
-		padding-left: 10px;
-		`}
-  }
-
-  ul li {
-    position: relative;
-  }
-
-  ul li:before {
-    position: absolute;
-    left: -10px;
-    top: 1.3rem;
-    width: 7px;
-    height: 1px;
-    background: blue;
-    display: block;
-    content: "";
-    ${media.smallDesktopAndBelow`
-      top: 13px;
-    `}
-  }
 `;
 
 export default AccordionStyles;

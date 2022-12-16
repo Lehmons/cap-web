@@ -97,13 +97,6 @@ export default function Page({
           })
         : null}
       <FormEnquiry />
-      {
-        <>
-          <div className="linebreaker"></div>
-          <div className="linebreaker"></div>
-          <div className="linebreaker"></div>
-        </>
-      }
       <Footer />
     </PageStyles>
   );

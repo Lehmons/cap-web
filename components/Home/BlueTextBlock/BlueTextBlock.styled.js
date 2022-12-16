@@ -62,33 +62,6 @@ const TextBlockStyles = styled.section`
       margin-top: 25px;
     `}
   }
-
-  .linked-page svg {
-    height: 14px;
-    width: 25px;
-    margin-top: 0.6rem;
-    ${media.smallDesktopAndBelow`
-      margin-top: 6px;
-    `}
-  }
-
-  .linked-page svg path {
-    stroke: white;
-  }
-
-  .linked-page span {
-    display: inline-block;
-    padding-left: 6rem;
-    padding-right: 0.5rem;
-    ${media.smallDesktopAndBelow`
-    padding-left: 60px;
-    padding-right: 5px;
-      `}
-    ${media.tabletPortraitAndBelow`
-      padding-left: 20px;
-      padding-right: 20px;
-    `}
-  }
 `;
 
 export default TextBlockStyles;
