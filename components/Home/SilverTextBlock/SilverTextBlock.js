@@ -4,7 +4,7 @@ import SimpleBlockContent from "~/components/SimpleBlockContent";
 import Link from "next/link";
 import Chevron from "./chevron.svg";
 
-export default function PageText({ paragraph, lineBreaker, linkedPage }) {
+export default function SilverTextBlock({ paragraph, lineBreaker, linkedPage }) {
   console.log(linkedPage);
   return (
     <SilverTextBlockStyles
@@ -15,7 +15,7 @@ export default function PageText({ paragraph, lineBreaker, linkedPage }) {
           <SimpleBlockContent blocks={paragraph} />
         </section>
       )}
-      {linkedPage && (
+      {linkedPage && linkedPage?.page?.slug?.current && (
         <Link href={linkedPage?.page?.slug?.current} scroll={false}>
           <a className="linked-page">
             <span>

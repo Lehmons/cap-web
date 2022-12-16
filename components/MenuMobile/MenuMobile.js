@@ -89,8 +89,6 @@ export default function Menu() {
     return null;
   }
 
-  console.log(data);
-
   return (
     <MenuMobileStyles
       className="mobile-menu"
