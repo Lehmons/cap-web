@@ -1,7 +1,7 @@
 @font-face {
   font-family: "Certeau";
-  src: url("/public/fonts/Certeau-Trial.woff2") format("woff2"),
-    url("/fonts/Certeau-Trial.woff") format("woff");
+  src: url("/public/fonts/certeau.woff2") format("woff2"),
+    url("/fonts/certeau.woff") format("woff");
   font-style: normal;
   font-weight: normal;
 }

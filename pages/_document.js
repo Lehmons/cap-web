@@ -29,13 +29,13 @@ export default function Document() {
         />
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="theme-color" content="#ffffff" />
-        {/* <link
+        <link
           rel="preload"
-          href="/fonts/bradford-light.woff2"
+          href="/fonts/certeau.woff2"
           as="font"
           type="font/woff2"
           crossOrigin="true"
-        /> */}
+        />
         <meta property="og:locale" content="en_GB" />
         <meta property="og:title" content="Cap Awards" />
         <meta property="og:description" content="Cap Awards" />
