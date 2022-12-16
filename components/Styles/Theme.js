@@ -5,6 +5,7 @@ const theme = {
   error: "hsla(0,100%,50%,1)",
   errorLight: "#FFDDDD",
   blue: "#0A26B4",
+  blue100: "#D4DAFD",
   viewport: 1440, // define viewport of development macnine for accurate rem sizes
   baseline: 10,
   sitePaddingBottom: "12rem",

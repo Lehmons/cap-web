@@ -195,6 +195,7 @@ const GlobalStyles = createGlobalStyle`
 
   q::before,
 	q > p,
+	q > div,
 	q::after{
 		display: inline;
 	}
